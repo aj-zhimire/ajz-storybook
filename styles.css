@@ -1,0 +1,62 @@
+/* AJZ Storybook — Minimal theme inspired by Ghost blogs.
+   Typography-first, roomy whitespace, and simple cards. */
+:root{
+  --bg: #ffffff;
+  --text: #111111;
+  --muted: #666666;
+  --accent: #0f766e; /* teal-700 */
+  --card: #fafafa;
+  --border: #e5e5e5;
+  --maxw: 800px;
+}
+@media (prefers-color-scheme: dark) {
+  :root{
+    --bg: #0b0b0c;
+    --text: #e8e8ea;
+    --muted: #a3a3a3;
+    --accent:#2dd4bf;
+    --card: #121214;
+    --border: #242428;
+  }
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:ui-serif, Georgia, 'Times New Roman', Times, serif;line-height:1.65}
+a{color:var(--text);text-decoration:none}
+a:hover{color:var(--accent)}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 16px}
+.header{border-bottom:1px solid var(--border);position:sticky;top:0;background:var(--bg);z-index:10}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.brand{display:flex;gap:12px;align-items:center}
+.logo{width:40px;height:40px;border-radius:999px;background:var(--accent);opacity:.9}
+.title{font-weight:800;font-size:20px;letter-spacing:.2px}
+.tagline{color:var(--muted);font-size:14px;margin-top:-6px}
+.menu{display:flex;gap:16px;align-items:center}
+.menu a{font-size:14px;color:var(--muted)}
+.menu a.active{color:var(--text);font-weight:600}
+.hero{padding:36px 0 8px 0}
+.hero h1{font-size:40px;margin:0}
+.hero p{margin:8px 0 0 0;color:var(--muted)}
+.grid{display:grid;gap:24px;margin:28px 0 64px 0}
+.card{background:var(--card);padding:20px;border:1px solid var(--border);border-radius:14px;transition:transform .08s ease}
+.card:hover{transform:translateY(-2px)}
+.meta{color:var(--muted);font-size:12px}
+.card h2{margin:8px 0 6px 0;font-size:22px}
+.footer{border-top:1px solid var(--border);padding:24px 0;color:var(--muted);font-size:14px}
+.prose{font-size:18px}
+.prose h1,.prose h2,.prose h3{line-height:1.25}
+.prose h1{font-size:40px;margin:10px 0 8px 0}
+.prose h2{font-size:28px;margin:28px 0 8px 0}
+.prose h3{font-size:22px;margin:20px 0 6px 0}
+.prose p{margin:12px 0}
+.prose img{width:100%;border-radius:14px;border:1px solid var(--border);background:var(--card)}
+.prose blockquote{margin:16px 0;padding:8px 16px;border-left:3px solid var(--accent);color:var(--muted);background:var(--card);border-radius:8px}
+.kicker{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.byline{display:flex;gap:10px;align-items:center;color:var(--muted);font-size:14px}
+hr{border:none;border-top:1px solid var(--border);margin:24px 0}
+.badge{display:inline-block;font-size:12px;padding:2px 8px;border:1px solid var(--border);border-radius:999px;color:var(--muted)}
+.btn{display:inline-block;padding:10px 14px;border-radius:10px;border:1px solid var(--border);background:var(--card);font-size:14px}
+figure{margin:0}
+figcaption{color:var(--muted);font-size:12px;margin-top:6px}
+@media (max-width: 640px){
+  .hero h1{font-size:32px}
+}
