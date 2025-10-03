@@ -1,0 +1,15 @@
+{
+    "recommendations": [
+        "ms-vscode.live-server",
+        "ritwickdey.liveserver",
+        "ms-vscode.vscode-json",
+        "bradlc.vscode-tailwindcss",
+        "esbenp.prettier-vscode",
+        "formulahendry.auto-rename-tag",
+        "ms-vscode.hexeditor",
+        "ms-vscode-remote.remote-containers",
+        "github.vscode-pull-request-github",
+        "ms-vsliveshare.vsliveshare",
+        "ms-vscode.vscode-github-issue-notebooks"
+    ]
+}
