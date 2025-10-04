@@ -364,87 +364,72 @@ figcaption{color:var(--muted);font-size:12px;margin-top:6px}
   display: block;
   margin-bottom: 12px;
 }
-/* Nature Insights Section */
-.nature-insights {
+
+/* Special cropping for sunset image to show more sky */
+.card img.sunset-crop {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center 30%; /* Shows more of the top (sky/sunset) */
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  display: block;
+  margin-bottom: 12px;
+}
+
+/* Einstein Quotes Section */
+.einstein-quotes {
   margin-top: 16px;
   padding: 20px;
-  background: var(--card);
+  background: linear-gradient(135deg, var(--card) 0%, var(--bg) 100%);
   border-radius: 12px;
   border: 1px solid var(--border);
 }
 
-.insight-section {
-  margin-bottom: 20px;
-}
-
-.insight-section h4 {
-  font-size: 16px;
-  margin: 0 0 8px 0;
-  color: var(--accent);
-  font-weight: 600;
-}
-
-.insight-section p {
-  margin: 0;
-  line-height: 1.6;
-  color: var(--text);
-}
-
-.benefits-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin: 20px 0;
-}
-
-.benefit-card {
-  background: var(--bg);
-  padding: 16px;
-  border-radius: 10px;
-  border: 1px solid var(--border);
-}
-
-.benefit-card h5 {
-  font-size: 14px;
-  margin: 0 0 10px 0;
-  color: var(--accent);
-  font-weight: 600;
-}
-
-.benefit-card ul {
-  margin: 0;
-  padding-left: 16px;
-  font-size: 13px;
-  color: var(--muted);
-}
-
-.benefit-card li {
-  margin-bottom: 6px;
-  line-height: 1.4;
-}
-
-.reflection {
-  margin-top: 20px;
-  padding: 16px;
-  background: linear-gradient(135deg, var(--bg) 0%, var(--card) 100%);
-  border-radius: 10px;
-  border-left: 4px solid var(--accent);
-}
-
-.reflection p {
-  margin: 0;
+.featured-einstein {
+  font-size: 18px;
   font-style: italic;
+  text-align: center;
+  margin: 0 0 20px 0;
+  padding: 20px;
+  background: var(--bg);
+  border-left: 4px solid var(--accent);
+  border-radius: 10px;
   color: var(--text);
-  line-height: 1.7;
-  font-size: 15px;
+  font-weight: 500;
 }
 
-@media (max-width: 768px) {
-  .benefits-grid {
-    grid-template-columns: 1fr;
+.daily-wisdom {
+  display: grid;
+  gap: 12px;
+}
+
+.wisdom-card {
+  padding: 14px;
+  background: var(--bg);
+  border-radius: 8px;
+  border-left: 3px solid var(--accent);
+}
+
+.wisdom-card p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.wisdom-card strong {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .einstein-quotes {
+    padding: 16px;
   }
   
-  .nature-insights {
+  .featured-einstein {
+    font-size: 16px;
     padding: 16px;
   }
 }
