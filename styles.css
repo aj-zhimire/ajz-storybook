@@ -368,9 +368,9 @@ figcaption{color:var(--muted);font-size:12px;margin-top:6px}
 /* Special cropping for sunset image to show more sky */
 .card img.sunset-crop {
   width: 100%;
-  height: 200px;
+  height: 250px; /* Increased from 200px to 250px for more vertical space */
   object-fit: cover;
-  object-position: center 20%; /* Shows even more of the top (sky/sunset) - less bottom cropping */
+  object-position: center 20%; /* This line controls the cropping */
   border-radius: 12px;
   border: 1px solid var(--border);
   display: block;
