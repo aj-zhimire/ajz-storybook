@@ -358,10 +358,20 @@ figcaption{color:var(--muted);font-size:12px;margin-top:6px}
 
 /* Wide sunset photo under Today's Reflection */
 .wide-sunset {
+  /* width: 100%;
+  height: 30vh; /* Wide landscape view 
+   object-fit: cover;
+  object-position: center 40%; /* Shows interesting middle portion 
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  margin-top: 20px;
+  display: block; 
+   */
+
   width: 100%;
-  height: 30vh; /* Wide landscape view */
+  height: 30vh;
   object-fit: cover;
-  object-position: center 40%; /* Shows interesting middle portion */
+  object-position: center 20%;
   border-radius: 12px;
   border: 1px solid var(--border);
   margin-top: 20px;
