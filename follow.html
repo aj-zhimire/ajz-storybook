@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Follow AJZ Storybook</title>
+  <meta name="description" content="Follow AJZ Storybook for updates on new stories, experiments, and discoveries">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo"></div>
+        <div>
+          <div class="title">AJZ Storybook</div>
+          <div class="tagline">Essays, notes, and wanderings</div>
+        </div>
+      </div>
+      <nav class="menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a class="active" href="follow.html">Follow</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container follow-page">
+    <section class="hero">
+      <span class="kicker">Stay Connected</span>
+      <h1>Follow AJZ Storybook</h1>
+      <p>Join a growing community of curious minds. Get notified when new stories, experiments, and discoveries are shared.</p>
+    </section>
+
+    <!-- Main Follow Component -->
+    <section class="follow-main">
+      <article class="card follow-card large">
+        <div class="follow-header">
+          <h2>✨ Choose Your Follow Method</h2>
+          <div class="meta">One-click setup · <span class="badge follow-badge">Simple</span></div>
+        </div>
+        
+        <div class="follow-options-grid">
+          <!-- Browser Notifications Option -->
+          <div class="follow-option primary" id="notificationOption">
+            <div class="option-icon">🔔</div>
+            <h3>Browser Notifications</h3>
+            <p>Get instant notifications when new content is published. Works right in your browser!</p>
+            <button id="followBtn" class="follow-button primary" onclick="toggleFollow()">
+              <span id="followIcon">⭐</span>
+              <span id="followText">Enable Notifications</span>
+            </button>
+            <div id="followStatus" class="follow-status"></div>
+          </div>
+
+          <!-- RSS Feed Option -->
+          <div class="follow-option">
+            <div class="option-icon">📡</div>
+            <h3>RSS Feed</h3>
+            <p>Perfect for RSS readers like Feedly, Inoreader, or Apple News.</p>
+            <a href="rss.xml" class="follow-button secondary">Subscribe to RSS</a>
+          </div>
+
+          <!-- Bookmark Option -->
+          <div class="follow-option">
+            <div class="option-icon">🔖</div>
+            <h3>Smart Bookmark</h3>
+            <p>Bookmark this page and get gentle reminders to check back.</p>
+            <button onclick="FollowCard.smartBookmark()" class="follow-button secondary">Add Bookmark</button>
+          </div>
+
+          <!-- Social Follow Option -->
+          <div class="follow-option">
+            <div class="option-icon">🔗</div>
+            <h3>Social Media</h3>
+            <p>Connect on social platforms for quick updates and conversations.</p>
+            <div class="social-buttons">
+              <a href="https://twitter.com/ajayzhimire" target="_blank" rel="noopener" class="social-btn">Twitter</a>
+              <a href="https://linkedin.com/in/ajayzhimire" target="_blank" rel="noopener" class="social-btn">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="follow-promise">
+          <h3>💡 My Promise to You</h3>
+          <p><strong>Quality over quantity.</strong> I'll only share when there's something genuinely worth your time—thoughtful stories, meaningful discoveries, and resources that spark curiosity. No spam, no excessive notifications, just valuable content delivered when it matters.</p>
+        </div>
+
+        <div class="follow-stats" id="followStats">
+          <!-- This will be populated by JavaScript -->
+        </div>
+      </article>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="follow-faq">
+      <h2>Frequently Asked Questions</h2>
+      
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h4>How do browser notifications work?</h4>
+          <p>When you enable notifications, your browser will show a small popup whenever new content is published. You can disable this anytime in your browser settings.</p>
+        </div>
+        
+        <div class="faq-item">
+          <h4>Will I get too many notifications?</h4>
+          <p>No! I only publish new content when there's something meaningful to share. Expect quality updates, not daily spam.</p>
+        </div>
+        
+        <div class="faq-item">
+          <h4>Can I unfollow anytime?</h4>
+          <p>Absolutely! You can disable notifications, unsubscribe from RSS, or remove bookmarks whenever you want. No hard feelings!</p>
+        </div>
+        
+        <div class="faq-item">
+          <h4>What if notifications don't work?</h4>
+          <p>Some browsers or devices may not support notifications. The RSS feed and bookmark options are great alternatives that work everywhere.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-main">
+          © <span data-year></span> AJZ Storybook. Built as a lightweight static site. <a href="https://ajayzhimire.app">ajayzhimire.app</a>
+        </div>
+        <div class="footer-follow">
+          <span>Quick Links:</span>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="rss.xml">RSS</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="follow.js"></script>
+</body>
+</html>
