@@ -21,8 +21,7 @@
       <nav class="menu">
         <a class="active" href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="#" onclick="return false;" style="opacity: 0.5; cursor: not-allowed;">Archive</a>
-        <a href="mailto:hello@ajayzhimire.app">Subscribe</a>
+        <a href="#follow-card">Follow</a>
       </nav>
     </div>
   </header>
@@ -165,6 +164,42 @@
         </div>
       </div>
     </section>
+
+    <!-- Follow Card Section - Above Footer -->
+    <section class="follow-section">
+      <div class="container">
+        <article id="follow-card" class="card follow-card">
+          <div class="follow-header">
+            <h2>✨ Follow AJZ Storybook</h2>
+            <div class="meta">Stay updated · <span class="badge follow-badge">New</span></div>
+          </div>
+          
+          <p>Get notified when new stories, experiments, and discoveries are shared. One-click follow, just like your favorite apps!</p>
+          
+          <div class="follow-action">
+            <button id="followBtn" class="follow-button" onclick="toggleFollow()">
+              <span id="followIcon">⭐</span>
+              <span id="followText">Follow</span>
+            </button>
+            <div id="followStatus" class="follow-status"></div>
+          </div>
+          
+          <div class="follow-details">
+            <div class="follow-method">
+              <span class="method-icon">🔔</span>
+              <div class="method-info">
+                <strong>Browser Notifications</strong>
+                <small>Instant updates when new content is published</small>
+              </div>
+            </div>
+            
+            <div class="follow-promise">
+              <small>💡 <strong>No spam promise:</strong> Quality over quantity. Only meaningful content worth your time.</small>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
@@ -175,4 +210,4 @@
 
   <script src="script.js"></script>
 </body>
-</html> 
+</html>
