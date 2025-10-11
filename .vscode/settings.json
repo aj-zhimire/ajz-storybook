@@ -1,5 +1,4 @@
 {
-    "livePreview.defaultPreviewPath": "/index.html",
     
     // UI and Display Settings
     "workbench.colorTheme": "Default Dark+",
@@ -39,6 +38,7 @@
     "git.enableSmartCommit": true,
     "git.confirmSync": false,
     "scm.diffDecorations": "all",
+    "git.autofetch": true,
     
     // Web Development Specific
     "html.format.indentInnerHtml": true,
@@ -47,6 +47,15 @@
     "javascript.format.enable": true,
     "emmet.includeLanguages": {
         "html": "html",
-        "css": "css"
-    }
+        "css": "css",
+        "javascript": "javascript"
+    },
+    "liveServer.settings.port": 5500,
+    
+    // GitHub Copilot
+    "github.copilot.enable": {
+        "*": false
+    },
+    "chat.defaultProvider": "chatgpt",
+    "openai.apiKey": "your-api-key-here"
 }

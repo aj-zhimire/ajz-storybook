@@ -377,3 +377,46 @@ figcaption{color:var(--muted);font-size:12px;margin-top:6px}
   margin-top: 20px;
   display: block;
 }
+
+/* Word cloud styles */
+.word-cloud-wrap {
+  margin-top: 18px;
+  text-align: center;
+  position: relative;
+}
+
+.word-cloud {
+  display: inline-block;
+  max-width: 760px;
+  width: 100%;
+  padding: 12px;
+  line-height: 1;
+  word-wrap: break-word;
+}
+
+.word-cloud .cloud-word {
+  display: inline-block;
+  margin: 6px 8px;
+  padding: 2px 4px;
+  vertical-align: middle;
+  transition: transform .18s ease, opacity .2s ease;
+  transform-origin: center;
+  cursor: default;
+  user-select: none;
+}
+
+.word-cloud .cloud-word:hover{
+  transform: scale(1.08) rotate(0deg);
+  text-decoration: underline;
+}
+
+/* visually-hidden helper */
+.visually-hidden {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px,1px,1px,1px);
+  white-space: nowrap;
+  border: 0; padding: 0; margin: -1px;
+}
+/* end word cloud */

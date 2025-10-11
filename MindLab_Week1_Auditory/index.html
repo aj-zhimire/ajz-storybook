@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mind Lab — Neuroscience Planner (Week 1: Auditory Processing)</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<header class="app-header">
+  <div class="branding">
+    <h1>Mind Lab</h1>
+    <p class="subtitle">Neuroscience Planner — Week 1: Auditory Processing</p>
+  </div>
+  <nav class="nav">
+    <a href="#dashboard">Dashboard</a>
+    <a href="#module">Daily Modules</a>
+    <a href="#journal">Journal</a>
+    <a href="#experiments">Experiments</a>
+    <a href="#timer">Pomodoro</a>
+    <a href="#about">About</a>
+  </nav>
+</header>
+
+<main>
+  <!-- DASHBOARD SUMMARY -->
+  <section id="dashboard" class="card">
+    <h2>Dashboard</h2>
+    <div class="grid-3">
+      <div class="stat">
+        <div class="stat-label">Week</div>
+        <div class="stat-value">1</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">Module</div>
+        <div class="stat-value">Auditory Processing</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">Completion</div>
+        <div class="stat-value" id="completion">0%</div>
+      </div>
+    </div>
+    <p class="muted">Your progress, notes, and checkboxes are saved to your browser (localStorage).</p>
+  </section>
+
+  <!-- DAILY MODULES -->
+  <section id="module" class="card">
+    <h2>Daily Modules</h2>
+    <p class="muted">Check off items as you go. Click a title to expand details. Edit tasks if you want to customize.</p>
+
+    <div class="accordion">
+      <!-- Monday -->
+      <details data-day="mon" open>
+        <summary><span>Monday — Sound → Signal (Transduction)</span><span class="day-progress" data-day-progress="mon">0%</span></summary>
+        <div class="day-content">
+          <ul class="todo" data-day-list="mon">
+            <li><label><input type="checkbox" /> Watch: MIT OCW Auditory Neuroscience (Intro)</label></li>
+            <li><label><input type="checkbox" /> Read: Hair Cells & Cochlear Mechanics (overview)</label></li>
+            <li><label><input type="checkbox" /> Sketch: Ear → Cochlea → Auditory Nerve</label></li>
+            <li><label><input type="checkbox" /> Experiment: Play tones (200Hz, 1kHz, 5kHz) & note sensations</label></li>
+          </ul>
+        </div>
+      </details>
+
+      <!-- Tuesday -->
+      <details data-day="tue">
+        <summary><span>Tuesday — Tonotopy & Frequency Coding</span><span class="day-progress" data-day-progress="tue">0%</span></summary>
+        <div class="day-content">
+          <ul class="todo" data-day-list="tue">
+            <li><label><input type="checkbox" /> Review: Tonotopic maps (A1)</label></li>
+            <li><label><input type="checkbox" /> Visualize: Spectrum of a sound clip (FFT concept)</label></li>
+            <li><label><input type="checkbox" /> Reflection: Attention as a frequency filter?</label></li>
+          </ul>
+        </div>
+      </details>
+
+      <!-- Wednesday -->
+      <details data-day="wed">
+        <summary><span>Wednesday — Temporal Coding & Timing</span><span class="day-progress" data-day-progress="wed">0%</span></summary>
+        <div class="day-content">
+          <ul class="todo" data-day-list="wed">
+            <li><label><input type="checkbox" /> Study: Phase-locking, spike timing</label></li>
+            <li><label><input type="checkbox" /> Mini-lab: Record claps at tempos & observe variability</label></li>
+            <li><label><input type="checkbox" /> Reflection: Timing noise ↔ market mispricing analogy</label></li>
+          </ul>
+        </div>
+      </details>
+
+      <!-- Thursday -->
+      <details data-day="thu">
+        <summary><span>Thursday — Attention & the Cocktail Party Problem</span><span class="day-progress" data-day-progress="thu">0%</span></summary>
+        <div class="day-content">
+          <ul class="todo" data-day-list="thu">
+            <li><label><input type="checkbox" /> Demo: Focus on one of two overlapping voices</label></li>
+            <li><label><input type="checkbox" /> Measure: How quickly can you switch focus?</label></li>
+            <li><label><input type="checkbox" /> Reflection: What is the 'volume knob' in decision-making?</label></li>
+          </ul>
+        </div>
+      </details>
+
+      <!-- Friday -->
+      <details data-day="fri">
+        <summary><span>Friday — Pathways: CN → SO → IC → MGN → A1</span><span class="day-progress" data-day-progress="fri">0%</span></summary>
+        <div class="day-content">
+          <ul class="todo" data-day-list="fri">
+            <li><label><input type="checkbox" /> Map the ascending auditory pathway</label></li>
+            <li><label><input type="checkbox" /> Lateralization: Speech vs. Music notes</label></li>
+            <li><label><input type="checkbox" /> Experiment: Speech in L ear, music in R ear; swap & note</label></li>
+          </ul>
+        </div>
+      </details>
+
+      <!-- Saturday -->
+      <details data-day="sat">
+        <summary><span>Saturday — Synthesis Project</span><span class="day-progress" data-day-progress="sat">0%</span></summary>
+        <div class="day-content">
+          <ul class="todo" data-day-list="sat">
+            <li><label><input type="checkbox" /> Create a 'Neural Path of Sound' poster</label></li>
+            <li><label><input type="checkbox" /> Add a behavioral-finance analogy for each station</label></li>
+            <li><label><input type="checkbox" /> Optional 2‑min audio log (narrate your learning)</label></li>
+          </ul>
+        </div>
+      </details>
+
+      <!-- Sunday -->
+      <details data-day="sun">
+        <summary><span>Sunday — Review & Planning</span><span class="day-progress" data-day-progress="sun">0%</span></summary>
+        <div class="day-content">
+          <ul class="todo" data-day-list="sun">
+            <li><label><input type="checkbox" /> Review notes & highlights</label></li>
+            <li><label><input type="checkbox" /> Update concept map</label></li>
+            <li><label><input type="checkbox" /> Write 3 research questions for next week</label></li>
+          </ul>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- JOURNAL -->
+  <section id="journal" class="card">
+    <h2>Journal & Intuition Lab</h2>
+    <div class="journal-grid">
+      <div class="journal-box">
+        <label for="journal-memo">Daily Memo</label>
+        <textarea id="journal-memo" placeholder="Free‑write your insights, questions, intuitions…"></textarea>
+      </div>
+      <div class="journal-box">
+        <label for="journal-experiment">Experiment Notes</label>
+        <textarea id="journal-experiment" placeholder="What did you observe? Any surprises?"></textarea>
+      </div>
+      <div class="journal-box">
+        <label for="journal-bridge">Behavior/Finance Bridge</label>
+        <textarea id="journal-bridge" placeholder="How does this relate to attention, risk, or decision noise?"></textarea>
+      </div>
+    </div>
+    <div class="journal-actions">
+      <button id="export-json">Export Notes (JSON)</button>
+      <button id="clear-notes" class="danger">Clear Notes</button>
+    </div>
+  </section>
+
+  <!-- EXPERIMENTS -->
+  <section id="experiments" class="card">
+    <h2>Interactive Experiments</h2>
+
+    <div class="exp">
+      <h3>Pure Tone Generator</h3>
+      <p class="muted">Use the slider to generate a sine wave tone. Try 200 Hz, 1000 Hz, 5000 Hz. Observe how each feels.</p>
+      <div class="tone-controls">
+        <label>Frequency: <span id="freq-label">440</span> Hz</label>
+        <input type="range" id="freq" min="50" max="8000" value="440" step="1">
+        <div class="row">
+          <button id="tone-start">Start</button>
+          <button id="tone-stop" class="secondary">Stop</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp">
+      <h3>Left/Right Attention Flip</h3>
+      <p class="muted">Play a tone on one side of your headphones, then flip. Notice the experience of selective attention.</p>
+      <div class="row">
+        <button data-pan="-1" class="pan-btn">Left</button>
+        <button data-pan="0" class="pan-btn">Center</button>
+        <button data-pan="1" class="pan-btn">Right</button>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- POMODORO -->
+  <section id="timer" class="card">
+    <h2>Pomodoro Focus Timer</h2>
+    <div class="timer">
+      <div id="time-display">25:00</div>
+      <div class="row">
+        <button id="start-pomo">Start</button>
+        <button id="pause-pomo" class="secondary">Pause</button>
+        <button id="reset-pomo" class="secondary">Reset</button>
+      </div>
+      <div class="row compact">
+        <label>Focus (min): <input type="number" id="focus-min" value="25" min="1" max="90"/></label>
+        <label>Break (min): <input type="number" id="break-min" value="5" min="1" max="30"/></label>
+        <select id="mode">
+          <option value="focus" selected>Focus</option>
+          <option value="break">Break</option>
+        </select>
+      </div>
+      <p class="muted small">Tip: Try 25/5 or 45/10 cycles.</p>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="card">
+    <h2>About This Planner</h2>
+    <p>This lightweight, offline‑friendly dashboard stores your progress and notes in your browser using localStorage. You can customize tasks (edit text directly), add new items, and export your notes as JSON for safekeeping.</p>
+    <ul>
+      <li><strong>Edit checklist items:</strong> Double‑click any item text to edit. Press Enter to save.</li>
+      <li><strong>Add a task:</strong> Type in the quick add box below each day (appears when expanded).</li>
+      <li><strong>Data:</strong> No accounts, no tracking — everything stays on your device.</li>
+    </ul>
+  </section>
+</main>
+
+<footer class="app-footer">
+  <div>© <span id="year"></span> Mind Lab — Built for Ajay</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
