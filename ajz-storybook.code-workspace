@@ -14,4 +14,22 @@
       "esbenp.prettier-vscode"
     ]
 
-}}
+},
+"launch": {
+	"configurations": [
+		{
+			"name": "Attach to Chrome",
+			"port": 9222,
+			"request": "attach",
+			"type": "chrome",
+			"webRoot": "${workspaceFolder}"
+		},
+		{
+			"type": "chrome",
+			"name": "http://127.0.0.1:3000/index.html",
+			"request": "launch",
+			"url": "http://127.0.0.1:3000/index.html"
+		}
+	]
+}
+}

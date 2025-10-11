@@ -2,7 +2,7 @@
     
     // UI and Display Settings
     "workbench.colorTheme": "Default Dark+",
-    "workbench.iconTheme": "vs-seti",
+    "workbench.iconTheme": "vsf-seti",
     "workbench.startupEditor": "welcomePage",
     "workbench.sideBar.location": "left",
     "workbench.panel.defaultLocation": "bottom",
@@ -16,12 +16,14 @@
     "editor.fontFamily": "'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace",
     "editor.lineHeight": 1.5,
     "editor.wordWrap": "on",
-    "editor.minimap.enabled": true,
+    "editor.minimap.enabled": false,
     "editor.lineNumbers": "on",
     "editor.rulers": [80, 120],
     "editor.renderWhitespace": "selection",
     "editor.cursorStyle": "line",
     "editor.cursorBlinking": "blink",
+    "editor.guides.indentation": false,
+    "editor.guides.bracketPairs": false,
     
     // Terminal Settings
     "terminal.integrated.fontSize": 13,
@@ -57,5 +59,6 @@
         "*": false
     },
     "chat.defaultProvider": "chatgpt",
-    "openai.apiKey": "your-api-key-here"
+    "openai.apiKey": "your-api-key-here",
+    "editor.minimap.autohide": "mouseover"
 }
