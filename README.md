@@ -14,7 +14,7 @@ A minimalist, Ghost‑inspired static site. Drop in your own photos and words.
 ```
 /
 ├── index.html        # home with cards
-├── about.html        # about page
+├── pages/about.html        # about page
 ├── archive.html      # simple archive list
 ├── post.html         # sample post template
 ├── scripts/styles.css        # theme

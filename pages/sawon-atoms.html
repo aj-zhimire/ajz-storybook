@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sawon's Atoms — Under Construction</title>
+  <meta name="description" content="Sawon's Atoms showcase — under construction">
+  <link rel="stylesheet" href="/scripts/styles.css">
+  <style>
+    /* Minimal, page-specific tweaks */
+    .uc-hero { max-width: 800px; margin: 36px auto; padding: 28px; text-align: center; border-radius: 12px; background: linear-gradient(180deg,#fff,#fbf8ff); box-shadow: 0 6px 18px rgba(11,22,33,0.04); }
+    .uc-title { font-size: 28px; margin-bottom: 6px; color: #073b4c; font-weight: 700; }
+    .uc-sub { color: var(--muted); margin-bottom: 18px; }
+    .uc-note { font-size: 18px; color: #111; margin-bottom: 20px; }
+    .uc-actions a, .uc-actions button { margin: 0 6px; }
+
+    /* sign styling */
+    .uc-sign {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      justify-content: center;
+      font-weight: 600;
+      color: #b45309;
+      background: #fff7ed;
+      padding: 8px 12px;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(11,22,33,0.04);
+      margin-bottom: 14px;
+    }
+    .uc-sign .icon { font-size: 20px; }
+  </style>
+</head>
+<body>
+  <div data-include="/partials/header.html"></div>
+
+  <main id="main" class="container">
+    <section class="uc-hero">
+      <div class="uc-title">Sawon's Atomic Journey</div>
+      <div class="uc-sub">By Doin' — Sawon's Chemistry Corner</div>
+      <div class="uc-sign" role="status" aria-live="polite">
+        <span class="icon" aria-hidden="true">🚧</span>
+        <span>Under construction — details coming soon</span>
+      </div>
+      <p class="uc-note">This space will host simple atom experiments, kid-friendly notes, and hands-on demos. Check back soon.</p>
+
+      <div class="uc-actions">
+        <button class="small-btn" onclick="FollowCard.notifyFollowers('Sawon Showcase', 'Atoms details coming soon')">Notify me when published</button>
+        <a class="showcase-link" href="/index.html">Back to Home</a>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="/partials/footer.html"></div>
+
+  <script src="/scripts/script.js"></script>
+</body>
+</html>
