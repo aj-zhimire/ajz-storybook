@@ -356,59 +356,22 @@ figcaption{color:var(--muted);font-size:12px;margin-top:6px}
   margin-bottom: 12px;
 }
 
-/* Wide sunset photo under Today's Reflection */
-.wide-sunset {
-  /* width: 100%;
-  height: 30vh; /* Wide landscape view 
-   object-fit: cover;
-  object-position: center 40%; /* Shows interesting middle portion 
-  border-radius: 12px;
-  border: 1px solid var(--border);
-  margin-top: 20px;
-  display: block; 
-   */
+/* Hero card */
+.hero-card { padding: 28px; border-radius: 16px; background: var(--card); }
+.hero-card .hero-content { max-width: 760px; margin: 0 auto; }
+.hero-card .kicker { color: var(--muted); font-size: 12px; text-transform: uppercase; }
 
-  width: 100%;
-  height: 30vh;
-  object-fit: cover;
-  object-position: center 20%;
-  border-radius: 12px;
-  border: 1px solid var(--border);
-  margin-top: 20px;
-  display: block;
-}
+/* Thought card */
+.thought-of-day { display: grid; grid-template-columns: 1fr; gap: 18px; align-items: start; }
+.thought-of-day .thought-label { color: var(--accent); font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
+.thought-of-day blockquote { margin: 0; font-style: italic; color: #222; }
 
-/* Word cloud styles */
-.word-cloud-wrap {
-  margin-top: 18px;
-  text-align: center;
-  position: relative;
-}
+/* Wide image */
+.wide-sunset { width: 100%; height: 30vh; object-fit: cover; border-radius: 12px; border: 1px solid var(--border); }
 
-.word-cloud {
-  display: inline-block;
-  max-width: 760px;
-  width: 100%;
-  padding: 12px;
-  line-height: 1;
-  word-wrap: break-word;
-}
-
-.word-cloud .cloud-word {
-  display: inline-block;
-  margin: 6px 8px;
-  padding: 2px 4px;
-  vertical-align: middle;
-  transition: transform .18s ease, opacity .2s ease;
-  transform-origin: center;
-  cursor: default;
-  user-select: none;
-}
-
-.word-cloud .cloud-word:hover{
-  transform: scale(1.08) rotate(0deg);
-  text-decoration: underline;
-}
+/* Word cloud */
+.word-cloud { display:inline-block; line-height:1; margin-top:6px; }
+.cloud-word { margin: 6px 8px; transition: transform .15s ease; cursor: pointer; }
 
 /* visually-hidden helper */
 .visually-hidden {
@@ -420,45 +383,3 @@ figcaption{color:var(--muted);font-size:12px;margin-top:6px}
   border: 0; padding: 0; margin: -1px;
 }
 /* end word cloud */
-
-/* Hero card (reusable component) */
-.hero-card {
-  padding: 28px;
-  border-radius: 16px;
-  margin-bottom: 20px;
-  background: var(--card);
-  box-shadow: 0 2px 8px rgba(8,12,14,0.03);
-}
-
-.hero-card .hero-content {
-  max-width: 760px;
-  margin: 0 auto;
-  text-align: left;
-}
-
-.hero-card .kicker {
-  display: block;
-  color: var(--muted);
-  font-size: 12px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin-bottom: 8px;
-}
-
-.hero-card h1 {
-  margin: 0 0 10px 0;
-  font-size: 44px;
-  line-height: 1.05;
-}
-
-.hero-card p {
-  color: var(--muted);
-  font-size: 18px;
-  margin-bottom: 14px;
-}
-
-/* keep the word cloud centered inside the hero card */
-.hero-card .word-cloud-wrap {
-  text-align: center;
-  margin-top: 8px;
-}
