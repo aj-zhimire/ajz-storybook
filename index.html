@@ -1,186 +1,31 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AJZ Storybook</title>
-  <meta name="description" content="AJZ Storybook: Essays, researches, and learnings">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="alternate" type="application/rss+xml" title="AJZ Storybook RSS" href="rss.xml">
-</head>
-<body>
-  <header class="header">
-    <div class="container nav">
-      <div class="brand">
-        <div class="logo"></div>
-        <div>
-          <div class="title">AJZ Storybook</div>
-          <div class="tagline">Essays, notes, and wanderings</div>
-        </div>
-      </div>
-      <nav class="menu">
-        <a class="active" href="index.html">Home</a>
-        <a href="about.html">About</a>
-      </nav>
-    </div>
-  </header>
 
-  <main class="container">
-    <section class="hero">
-      <span class="kicker">Welcome</span>
-      <h1>Learn, share and grow!</h1>
-      <p>Experiments in learning: transforming math lessons with stories rather than numbers, exploring new topics that can be practiced and shared.</p>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AJZ Storybook</title>
+    <meta name="description" content="AJZ Storybook: Essays, researches, and learnings">
+    <link rel="stylesheet" href="scripts/styles.css">
+    <link rel="alternate" type="application/rss+xml" title="AJZ Storybook RSS" href="rss.xml">
+  </head>
 
-      <!-- Word cloud (By Doin' -a Sawon's Chemistry Corner.) -->
-      <div class="word-cloud-wrap" aria-hidden="false">
-        <div id="wordCloud" class="word-cloud" aria-hidden="true"></div>
-        <div class="word-cloud-fallback visually-hidden" id="wordCloudFallback">By Doin' -a Sawon's Chemistry Corner.</        # check current branch and status
-        git branch --show-current
-        git status --porcelain
-        
-        # stage all changes, commit with a concise message, and push
-        git add .
-        git commit -m "Add Sawon atoms showcase page and word-cloud link; update styles and script"
-        git push origin $(git branch --show-current)div>
-      </div>
-    </section>
+  <body><!------------------------------------------>
+    <div data-include="partials/header.html"></div>
 
-    <!-- Thought of the Day -->
-    <section class="thought-of-day">
-      <div class="thought-content">
-        <span class="thought-label">Today's Reflection</span>
-        <blockquote>"The important thing is not to stop questioning. Curiosity has its own reason for existing." by Albert Einstein</blockquote>
-        <div class="thought-meta">
-          <small>Oct 4, 2025 • <a href="https://youtu.be/cRmbwczTC6E" target="_blank" rel="noopener">🎥 Watch: The Power of Curiosity</a></small>
-        </div>
-      </div>
-      <!-- Wide sunset photo under Today's Reflection -->
-      <img src="assets/placeholder.jpg" alt="Beautiful sunset landscape" class="wide-sunset">
-    </section>
+    <main class="container">
+      <div data-include="pages/hero.html"></div>
 
-    <section class="grid">
-      <article class="card">
-        <h2>Understanding Sound for Young Scientists</h2>
-        <div class="meta">Sep 20, 2025 · 3 min read · <span class="badge">Science</span></div>
-        <p>Why can't we hear what dogs hear? Explore the amazing world of sound waves, frequency, and how different animals experience sound! Perfect for curious middle schoolers.</p>
-        
-        <div class="learning-resources">
-          <div class="resource-links">
-            <a href="https://www.youtube.com/watch?v=TsQL-sXZOLc" target="_blank" rel="noopener" class="resource-link video">
-              How Sound Works (3 min)
-            </a>
-            <a href="https://www.youtube.com/watch?v=_2By2ane2I4" target="_blank" rel="noopener" class="resource-link video">
-              Animal Hearing vs Human Hearing
-            </a>
-            <a href="https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=600" target="_blank" rel="noopener" class="resource-link image">
-              Frequency Chart
-            </a>
-          </div>
-          
-          <div class="fun-facts">
-            <h4>Quick Facts:</h4>
-            <ul>
-              <li><strong>Dogs hear:</strong> 67Hz to 45,000Hz</li>
-              <li><strong>Humans hear:</strong> 20Hz to 20,000Hz</li>
-              <li><strong>Elephants hear:</strong> Really low sounds we can't!</li>
-              <li><strong>Sound travels:</strong> about 343 meters per second</li>
-            </ul>
-          </div>
-        </div>
-      </article>
+      <div data-include="pages/today-reflection.html"></div>
 
-      <!-- Hidden: Field Journal Wandering Card
-      <article class="card">
-          <img src="assets/maxJ.jpg" alt="Jayna, Sawon and Max the German Shepherd exploring nature together" class="wide-field-photo">
-          <h2>Field Journal: Wandering with Jayna, Sawon & Max</h2>
-        <div class="meta">Sep 12, 2025 · 5 min read · <span class="badge">Nature</span></div>
-        <p>Watching Jayna and Sawon explore the world alongside Max, our 3.5-year-old German Shepherd, reveals the profound magic that happens when children and dogs connect with nature together.</p>
-        
-        <div class="nature-insights">
-          <div class="insight-section">
-            <h4>The Nature-Children-Dog Bond</h4>
-            <p>There's something extraordinary about this quartet. <strong>Jayna and Sawon</strong> see wonder in every leaf, <strong>Max</strong> discovers stories in every scent, and <strong>nature</strong> becomes their shared classroom where curiosity has no limits and sibling adventures unfold naturally.</p>
-          </div>
-          
-          <div class="benefits-grid">
-            <div class="benefit-card">
-              <h5>For Children</h5>
-              <ul>
-                <li>Develops empathy and responsibility</li>
-                <li>Strengthens sibling bonds through shared exploration</li>
-                <li>Reduces screen time naturally</li>
-                <li>Builds confidence through discovery together</li>
-                <li>Learns patience from their canine companion</li>
-              </ul>
-            </div>
-            
-            <div class="benefit-card">
-              <h5>For Dogs</h5>
-              <ul>
-                <li>Mental stimulation from new environments</li>
-                <li>Gentle exercise and socialization</li>
-                <li>Strengthens bond with entire family</li>
-                <li>Natural stress relief and happiness</li>
-                <li>Becomes protective companion for both children</li>
-              </ul>
-            </div>
-          </div>
-          
-          <div class="reflection">
-            <p><em>"In their eyes, a simple flower becomes an entire universe of discovery. Max's tail wags match Jayna and Sawon's laughter as they find magic in the ordinary, reminding us that the best lessons aren't taught, they're experienced together in the wild wonder of our world."</em></p>
-          </div>
-        </div>
-      </article>
-      -->
-    </section>
+      <div data-include="pages/young-scientists.html"></div>
 
-    <!-- Dr. Jane Goodall Tribute -->
-    <section class="tribute-section">
-      <div class="tribute-header">
-        <span class="kicker">Inspiration</span>
-        <h2>Know Dr. Jane Goodall</h2>
-        <p class="tribute-intro">Celebrating the remarkable life, groundbreaking work, and enduring wisdom of a woman who changed how we see ourselves and our relationship with the natural world.</p>
-      </div>
-      
-      <div class="tribute-content">
-        <div class="tribute-life">
-          <h3>Revolutionary Life</h3>
-          <p>At 26, with no formal scientific training, Jane Goodall ventured into what is now Gombe Stream National Park in Tanzania. Her patient observations of chimpanzees revolutionized our understanding of what it means to be human. She discovered that chimpanzees make and use tools, have complex social relationships, and display emotions. These findings redefined humanity itself.</p>
-        </div>
+      <div data-include="pages/tribute.html"></div>
+    </main>
 
-        <div class="tribute-quotes">
-          <h3>Words of Wisdom</h3>
-          <blockquote class="featured-quote">
-            "What you do makes a difference, and you have to decide what kind of difference you want to make."
-          </blockquote>
-          
-          <div class="quote-collection">
-            <div class="mini-quote">
-              <p>"Every individual matters. Every individual has a role to play. Every individual makes a difference."</p>
-            </div>
-            <div class="mini-quote">
-              <p>"Hope is not passive. Hope is action."</p>
-            </div>
-            <div class="mini-quote">
-              <p>"We have a choice to use the gift of our life to make the world a better place or not to bother."</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="tribute-links">
-        <a href="https://www.janegoodall.org/" target="_blank" rel="noopener" class="tribute-link">Jane Goodall Institute</a>
-        <a href="https://www.rootsandshoots.org/" target="_blank" rel="noopener" class="tribute-link">Roots & Shoots</a>
-      </div>
-    </section>
-  </main>
+    <div data-include="partials/footer.html"></div>
 
-  <footer class="footer">
-    <div class="container">
-      © <span data-year></span> AJZ Storybook. Built as a lightweight static site. <a href="https://ajayzhimire.app">ajayzhimire.app</a>
-    </div>
-  </footer>
+    <script src="scripts/script.js"></script>
+  </body>
 
-  <script src="script.js"></script>
-</body>
 </html>

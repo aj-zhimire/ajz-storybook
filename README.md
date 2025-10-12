@@ -17,8 +17,8 @@ A minimalist, Ghost‑inspired static site. Drop in your own photos and words.
 ├── about.html        # about page
 ├── archive.html      # simple archive list
 ├── post.html         # sample post template
-├── styles.css        # theme
-├── script.js         # tiny JS (year stamp)
+├── scripts/styles.css        # theme
+├── scripts/script.js         # tiny JS (year stamp)
 └── assets/
     ├── placeholder.jpg
     └── avatar-placeholder.svg
@@ -26,7 +26,7 @@ A minimalist, Ghost‑inspired static site. Drop in your own photos and words.
 
 ## Customize
 - Change the brand text in the header of each page.
-- Colors live at the top of `styles.css` in `:root`.
+- Colors live at the top of `scripts/styles.css` in `:root`.
 - Add more posts by duplicating `post.html` and linking from the home or archive.
 - For an email sign‑up, link the **Subscribe** nav item to your tool (Mailchimp, Ghost, ConvertKit, Formspree).
 
