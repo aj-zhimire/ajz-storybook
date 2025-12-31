@@ -1,0 +1,114 @@
+.grid {
+  display: grid;
+  gap: 24px;
+  margin: 28px 0 64px 0;
+}
+
+.card {
+  background: var(--card);
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  transition: transform 0.08s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
+
+.card h2 {
+  margin: 8px 0 6px 0;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  line-height: 1.15;
+}
+
+.meta {
+  color: var(--muted);
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 12px;
+  padding: 2px 8px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--muted);
+}
+
+.learning-resources {
+  margin-top: 16px;
+  padding: 16px;
+  background: var(--bg);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.resource-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.resource-link {
+  display: inline-block;
+  padding: 8px 12px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 13px;
+  transition: background 0.2s ease;
+}
+
+.resource-link:hover {
+  background: var(--card);
+}
+
+.fun-facts {
+  padding: 12px 0;
+}
+
+.fun-facts h4 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text);
+}
+
+.fun-facts ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.fun-facts li {
+  font-size: 13px;
+  color: var(--muted);
+  padding: 4px 0;
+  margin-left: 12px;
+  position: relative;
+}
+
+.fun-facts li:before {
+  content: "→";
+  position: absolute;
+  left: -12px;
+  color: var(--accent);
+}
+
+@media (max-width: 768px) {
+  .grid {
+    gap: 16px;
+    margin: 20px 0 40px 0;
+  }
+
+  .resource-links {
+    flex-direction: column;
+  }
+}
