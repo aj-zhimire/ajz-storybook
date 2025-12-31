@@ -498,11 +498,11 @@ figcaption{color:var(--muted);font-size:12px;margin-top:6px}
 }
 
 .hunger-in-texas h2 {
-  font-size: 40px;
-  margin: 0 0 28px 0;
+  font-size: 24px;
   font-weight: 700;
   letter-spacing: 0.2px;
   line-height: 1.1;
+  text-align: center;
 }
 
 .hunger-in-texas .event-card {
@@ -525,7 +525,7 @@ figcaption{color:var(--muted);font-size:12px;margin-top:6px}
 }
 
 .hunger-in-texas .event-details h3 {
-  font-size: 24px;
+  font-size: 22px;
   margin: 0 0 8px 0;
   font-weight: 700;
   letter-spacing: 0.2px;
@@ -618,9 +618,71 @@ figcaption{color:var(--muted);font-size:12px;margin-top:6px}
   text-decoration: underline;
 }
 
+/* RSVP Topics Section */
+.topics-rsvp-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.topics-rsvp-row ul {
+  flex: 1;
+  margin: 12px 0 20px 20px;
+}
+
+.rsvp-inline {
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.rsvp-inline .qr-container {
+  margin: 0;
+}
+
+.qr-code-small {
+  width: 100px;
+  height: 100px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 4px;
+  background: white;
+}
+
+.rsvp-label {
+  font-size: 12px;
+  font-weight: 600;
+  margin: 4px 0 0 0;
+  color: var(--muted);
+}
+
+.rsvp-email-link {
+  margin-top: 8px;
+  font-size: 12px;
+}
+
+.rsvp-email-link a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.rsvp-email-link a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .topics-rsvp-row {
+    flex-direction: column;
+  }
+  
+  .rsvp-inline {
+    align-self: center;
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
-  .hunger-in-texas h2 {
+  .hunger-in-texas h3 {
     font-size: 32px;
   }
   
@@ -631,4 +693,25 @@ figcaption{color:var(--muted);font-size:12px;margin-top:6px}
   .hunger-in-texas .event-details h3 {
     font-size: 20px;
   }
+}
+
+.hunger-in-texas .event-info a {
+  color: var(--accent);
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.hunger-in-texas .event-info a:hover {
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+.announcement-card blockquote a {
+  color: var(--accent);
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.announcement-card blockquote a:hover {
+  opacity: 0.8;
 }
