@@ -3,21 +3,31 @@
 // Load HTML partials for elements with data-include before other initializations
 async function loadIncludes() {
   const includes = document.querySelectorAll('[data-include]');
+  console.log('🔍 Found includes:', includes.length, Array.from(includes).map(el => el.getAttribute('data-include')));
   if (!includes.length) return;
-  await Promise.all(Array.from(includes).map(async (el) => {
+  
+  for (const el of includes) {
     const url = el.getAttribute('data-include');
-    if (!url) return;
+    if (!url) continue;
     try {
       const res = await fetch(url);
       if (!res.ok) throw new Error(`Failed to fetch ${url}: ${res.status}`);
       const text = await res.text();
-      // Replace the placeholder with the fetched HTML
+      console.log('✅ Loaded:', url, 'length:', text.length);
       el.outerHTML = text;
     } catch (err) {
       console.error('include error:', url, err);
     }
-  }));
+  }
+  
+  // Check for nested includes after all current ones are loaded
+  const nestedIncludes = document.querySelectorAll('[data-include]');
+  console.log('🔍 Nested includes:', nestedIncludes.length, Array.from(nestedIncludes).map(el => el.getAttribute('data-include')));
+  if (nestedIncludes.length > 0) {
+    await loadIncludes();
+  }
 }
+
 
 // Single initialization after includes are loaded
 document.addEventListener('DOMContentLoaded', async () => {

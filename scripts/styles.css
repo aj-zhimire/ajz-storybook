@@ -432,3 +432,42 @@ figcaption{color:var(--muted);font-size:12px;margin-top:6px}
   border: 0; padding: 0; margin: -1px;
 }
 /* end word cloud */
+
+/* Follow Card Styles */
+.follow-section {
+  margin-left: 1rem;
+}
+
+.follow-btn {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text-color, #333);
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.follow-btn:hover {
+  background: rgba(0, 0, 0, 0.05);
+  transform: scale(1.1);
+}
+
+.follow-btn.following {
+  color: var(--success-color, #28a745);
+}
+
+.btn-icon {
+  font-size: 1.5rem;
+}
+
+.follow-status {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary, #666);
+  text-align: center;
+}

@@ -2,26 +2,47 @@
 
 // Load HTML partials for elements with data-include before other initializations
 async function loadIncludes() {
-  const includes = document.querySelectorAll('[data-include]');
-  if (!includes.length) return;
-  await Promise.all(Array.from(includes).map(async (el) => {
-    const url = el.getAttribute('data-include');
-    if (!url) return;
-    try {
-      const res = await fetch(url);
-      if (!res.ok) throw new Error(`Failed to fetch ${url}: ${res.status}`);
-      const text = await res.text();
-      // Replace the placeholder with the fetched HTML
-      el.outerHTML = text;
-    } catch (err) {
-      console.error('include error:', url, err);
+  let hasIncludes = true;
+  
+  // Keep looping until no more includes are found
+  while (hasIncludes) {
+    const includes = document.querySelectorAll('[data-include]');
+    console.log('🔍 Found includes:', includes.length, Array.from(includes).map(el => el.getAttribute('data-include')));
+    
+    if (includes.length === 0) {
+      hasIncludes = false;
+      break;
     }
-  }));
+    
+    // Process one level at a time
+    for (const el of includes) {
+      const url = el.getAttribute('data-include');
+      if (!url) continue;
+      
+      try {
+        const res = await fetch(url);
+        if (!res.ok) throw new Error(`Failed to fetch ${url}: ${res.status}`);
+        const text = await res.text();
+        console.log('✅ Loaded:', url, 'length:', text.length);
+        el.outerHTML = text;
+      } catch (err) {
+        console.error('❌ Include error:', url, err);
+        el.remove(); // Remove failed includes to prevent infinite loop
+      }
+    }
+    
+    // Small delay to let DOM settle
+    await new Promise(resolve => setTimeout(resolve, 10));
+  }
+  
+  console.log('✅ All includes loaded');
 }
 
 // Single initialization after includes are loaded
 document.addEventListener('DOMContentLoaded', async () => {
+  console.log('🚀 DOM loaded, starting includes...');
   await loadIncludes();
+  console.log('🎉 Includes complete, initializing...');
 
   const yearEl = document.querySelector('[data-year]');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
@@ -30,9 +51,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   initWordCloud("By Doin' -a Sawon's Chemistry Corner.");
 
   // Initialize follow card behavior
-  if (typeof FollowCard !== 'undefined' && FollowCard.init) {
-    FollowCard.init();
-  }
+  FollowCard.init();
 });
 
 // Word cloud implementation (lightweight) — updated to link to new page
@@ -191,23 +210,19 @@ const FollowCard = {
   updateUI() {
     const followBtn = document.getElementById('followBtn');
     const followIcon = document.getElementById('followIcon');
-    const followText = document.getElementById('followText');
-    const followStatus = document.getElementById('followStatus');
     
     if (!followBtn) return;
     
     if (this.isFollowing) {
       followIcon.textContent = '✓';
-      followText.textContent = 'Following';
       followBtn.classList.add('following');
-      followStatus.textContent = "You'll be notified of new content!";
-      followStatus.className = 'follow-status active';
+      followBtn.title = 'Following - Click to unfollow';
+      followBtn.setAttribute('aria-label', 'Following - Click to unfollow');
     } else {
       followIcon.textContent = '⭐';
-      followText.textContent = 'Follow';
       followBtn.classList.remove('following');
-      followStatus.textContent = '';
-      followStatus.className = 'follow-status';
+      followBtn.title = 'Follow for updates';
+      followBtn.setAttribute('aria-label', 'Follow for updates');
     }
   },
   
