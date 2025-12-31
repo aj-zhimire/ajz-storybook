@@ -1,0 +1,79 @@
+.header {
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  z-index: 10;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 0;
+}
+
+.brand {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background: var(--accent);
+  opacity: 0.9;
+}
+
+.title {
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: 0.2px;
+}
+
+.tagline {
+  color: var(--muted);
+  font-size: 14px;
+  margin-top: -6px;
+}
+
+.menu {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.menu a {
+  font-size: 14px;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.menu a.active {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.follow-section {
+  display: inline;
+}
+
+.follow-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.follow-btn:hover {
+  background: var(--card);
+}
+
+.btn-icon {
+  display: inline-block;
+}

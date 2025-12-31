@@ -1,35 +1,16 @@
-# AJZ Storybook
+# React + Vite
 
-A minimalist, Ghost‑inspired static site. Drop in your own photos and words.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Quick Start
-1. **Edit** the HTML files (title, bio, posts).
-2. **Replace images** in `assets/` with your own (keep the same filenames or update the paths).
-3. **Deploy** anywhere:
-   - **GitHub Pages**: push to a repo and enable Pages.
-   - **Netlify / Vercel**: drag & drop the folder or connect the repo.
-   - **Your own domain** `ajz-storybook.com`: point the domain to your hosting provider (A record or CNAME) and set the site root to this folder.
+Currently, two official plugins are available:
 
-## Structure
-```
-/
-├── index.html        # home with cards
-├── pages/about.html        # about page
-├── archive.html      # simple archive list
-├── post.html         # sample post template
-├── scripts/styles.css        # theme
-├── scripts/script.js         # tiny JS (year stamp)
-└── assets/
-    ├── placeholder.jpg
-    └── avatar-placeholder.svg
-```
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Customize
-- Change the brand text in the header of each page.
-- Colors live at the top of `scripts/styles.css` in `:root`.
-- Add more posts by duplicating `post.html` and linking from the home or archive.
-- For an email sign‑up, link the **Subscribe** nav item to your tool (Mailchimp, Ghost, ConvertKit, Formspree).
+## React Compiler
 
-## Notes
-- This is intentionally lightweight (no build step).
-- If you prefer React/Next.js routing or a markdown blog, I can generate that version too.
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.

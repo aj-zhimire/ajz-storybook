@@ -1,0 +1,94 @@
+.hero {
+  padding: 36px 0 8px 0;
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  line-height: 1.1;
+}
+
+.hero h2 {
+  font-size: 28px;
+  margin: 8px 0 6px 0;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  line-height: 1.15;
+}
+
+.hero p {
+  margin: 8px 0 0 0;
+  color: var(--muted);
+}
+
+.hero-card {
+  padding: 24px;
+  display: block;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  transition: transform 0.08s ease;
+}
+
+.hero-card:hover {
+  transform: translateY(-2px);
+}
+
+.kicker {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.word-cloud-wrap {
+  margin-top: 18px;
+  text-align: center;
+  position: relative;
+}
+
+.word-cloud {
+  display: inline-block;
+  max-width: 760px;
+  width: 100%;
+  padding: 12px;
+  line-height: 1;
+  word-wrap: break-word;
+}
+
+.word-cloud span {
+  display: inline-block;
+  margin: 6px 8px;
+  padding: 2px 4px;
+  vertical-align: middle;
+  transition: transform 0.18s ease, opacity 0.2s ease;
+  transform-origin: center;
+  cursor: default;
+  user-select: none;
+}
+
+.word-cloud span:hover {
+  transform: scale(1.08) rotate(0deg);
+  text-decoration: underline;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+  border: 0;
+  padding: 0;
+  margin: -1px;
+}
+
+@media (max-width: 768px) {
+  .hero h1,
+  .hero h2 {
+    font-size: 32px;
+  }
+}
