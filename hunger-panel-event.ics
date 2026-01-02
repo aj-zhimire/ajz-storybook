@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Unique Toastmasters Club//Food Insecurity Panel//EN
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+
+BEGIN:VEVENT
+UID:20260130T070000-frisco-food-insecurity@unique.toastmasters
+DTSTAMP:20260101T120000Z
+DTSTART:20260130T070000
+DTEND:20260130T074500
+SUMMARY:Hunger in North Texas: Community Food Insecurity Panel
+LOCATION:Rosa's Café, 12275 Custer Road, Frisco, TX 75035
+DESCRIPTION:Community panel hosted by Unique Toastmasters Club in partnership with the North Texas Food Bank. Topics include hunger trends in North Texas, SNAP impacts, and community action. Non-partisan, educational forum. Attendance optional; staff representative welcome.
+ORGANIZER;CN=Ajay Ghimire:MAILTO:ajayzhimire@yahoo.com
+ATTENDEE;CN=Unique Toastmasters Frisco;ROLE=REQ-PARTICIPANT:MAILTO:UniqueTMFrisco@gmail.com
+STATUS:CONFIRMED
+END:VEVENT
+
+END:VCALENDAR
