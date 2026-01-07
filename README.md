@@ -1,35 +1,72 @@
 # AJZ Storybook
 
-A minimalist, Ghost‑inspired static site. Drop in your own photos and words.
+A minimalist, Ghost-inspired site built with React + Vite. Essays, researches, and learnings.
 
 ## Quick Start
-1. **Edit** the HTML files (title, bio, posts).
-2. **Replace images** in `assets/` with your own (keep the same filenames or update the paths).
-3. **Deploy** anywhere:
-   - **GitHub Pages**: push to a repo and enable Pages.
-   - **Netlify / Vercel**: drag & drop the folder or connect the repo.
-   - **Your own domain** `ajz-storybook.com`: point the domain to your hosting provider (A record or CNAME) and set the site root to this folder.
+
+### Development
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+```
+The site will be available at `http://localhost:5173/`
+
+### Production Build
+```bash
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+The production files will be in the `dist/` directory.
+
+### Deployment
+- **GitHub Pages**: Build and deploy the `dist/` folder
+- **Netlify / Vercel**: Connect the repo and they'll automatically build with `npm run build`
+- **Custom domain**: Point to your hosting provider and deploy the built `dist/` folder
 
 ## Structure
 ```
 /
-├── index.html        # home with cards
-├── pages/about.html        # about page
-├── archive.html      # simple archive list
-├── post.html         # sample post template
-├── scripts/styles.css        # theme
-├── scripts/script.js         # tiny JS (year stamp)
-└── assets/
-    ├── placeholder.jpg
-    └── avatar-placeholder.svg
+├── index.html              # React app entry point
+├── src/
+│   ├── main.jsx           # React entry point
+│   ├── App.jsx            # Main app component
+│   ├── styles.css         # Theme styles
+│   └── components/
+│       ├── Header.jsx
+│       ├── Footer.jsx
+│       ├── Hero.jsx
+│       ├── WordCloud.jsx
+│       ├── FollowCard.jsx
+│       └── [other components]
+├── public/
+│   ├── assets/            # Images and static files
+│   └── hunger-panel-event.ics
+├── pages/                 # Legacy HTML pages
+├── package.json
+└── vite.config.js
 ```
 
-## Customize
-- Change the brand text in the header of each page.
-- Colors live at the top of `scripts/styles.css` in `:root`.
-- Add more posts by duplicating `post.html` and linking from the home or archive.
-- For an email sign‑up, link the **Subscribe** nav item to your tool (Mailchimp, Ghost, ConvertKit, Formspree).
+## Features
+- ✨ Modern React 18 + Vite build system
+- 🎨 Preserved original Ghost-inspired design
+- 🔤 Interactive word cloud with colors and rotations
+- 📬 Follow/subscribe functionality with localStorage
+- 🌙 Dark mode support (via CSS prefers-color-scheme)
+- 📱 Fully responsive design
 
-## Notes
-- This is intentionally lightweight (no build step).
-- If you prefer React/Next.js routing or a markdown blog, I can generate that version too.
+## Customize
+- Edit React components in `src/components/` to change content
+- Colors live at the top of `src/styles.css` in `:root`
+- Update `src/App.jsx` to add/remove sections
+- Add new components by creating `.jsx` files in `src/components/`
+
+## Technologies
+- React 18
+- Vite 5
+- Vanilla CSS (no preprocessor)
