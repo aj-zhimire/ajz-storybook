@@ -6,12 +6,5 @@
 	],
 	"settings": {
 		"terminal.integrated.fontSize": 16
-	},
-	"extensions": {
-    "recommendations": [
-      "ms-vscode.live-server",
-      "bradlc.vscode-tailwindcss",
-      "esbenp.prettier-vscode"
-    ]
-
-}}
+	}
+}
