@@ -34,27 +34,13 @@ a:hover{color:var(--accent)}
   justify-content: space-between;
   height: 70px;
 }
-.nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
-.brand{display:flex;gap:12px;align-items:center}
+
 .logo{width:40px;height:40px;border-radius:999px;background:var(--accent);opacity:.9}
-.logo a {
-  font-weight: 800;
-  font-size: 20px;
-  letter-spacing: 0.2px;
-  color: var(--text);
-  text-decoration: none;
-}
-.logo a:hover {
-  color: var(--accent);
-}
 .title{font-weight:800;font-size:20px;letter-spacing:.2px}
 .tagline{color:var(--muted);font-size:14px;margin-top:-6px}
 .menu{display:flex;gap:16px;align-items:center}
 .menu a{font-size:14px;color:var(--muted)}
 .menu a.active{color:var(--text);font-weight:600}
-.hero{padding:36px 0 8px 0}
-.hero h1{font-size:40px;margin:0;font-weight:700;letter-spacing:0.2px;line-height:1.1}
-.hero p{margin:8px 0 0 0;color:var(--muted)}
 .card{background:var(--card);padding:20px;border:1px solid var(--border);border-radius:14px;transition:transform .08s ease}
 .card:hover{transform:translateY(-2px)}
 .card h2{margin:8px 0 6px 0;font-size:22px;font-weight:700;letter-spacing:0.2px;line-height:1.15}
@@ -67,10 +53,8 @@ a:hover{color:var(--accent)}
   display: block;
   margin-bottom: 12px;
 }
-.footer{border-top:1px solid var(--border);padding:24px 0;color:var(--muted);font-size:14px}
-figure{margin:0}
-figcaption{color:var(--muted);font-size:12px;margin-top:6px}
-hr{border:none;border-top:1px solid var(--border);margin:24px 0}
+
+.site-footer{border-top:1px solid var(--border);padding:24px 0;color:var(--muted);font-size:14px}
 
 /* Thought of the Day */
 .thought-of-day {
@@ -219,21 +203,6 @@ hr{border:none;border-top:1px solid var(--border);margin:24px 0}
   text-decoration: underline;
 }
 
-/* Follow links */
-.follow-links {
-  margin-top: 0.5rem;
-  font-weight: 600;
-}
-
-.follow-links a {
-  color: #0b66c2;
-  text-decoration: none;
-}
-
-.follow-links a:hover { 
-  text-decoration: underline; 
-}
-
 /* Learning Resources for Science Articles */
 .learning-resources {
   margin-top: 16px;
@@ -304,48 +273,6 @@ hr{border:none;border-top:1px solid var(--border);margin:24px 0}
   border: 1px solid var(--border);
   margin-top: 20px;
   display: block;
-}
-
-/* Word cloud styles */
-.word-cloud-wrap {
-  margin-top: 18px;
-  text-align: center;
-  position: relative;
-}
-
-.word-cloud {
-  display: inline-block;
-  max-width: 760px;
-  width: 100%;
-  padding: 12px;
-  line-height: 1;
-  word-wrap: break-word;
-}
-
-.word-cloud .cloud-word {
-  display: inline-block;
-  margin: 6px 8px;
-  padding: 2px 4px;
-  vertical-align: middle;
-  transition: transform .18s ease, opacity .2s ease;
-  transform-origin: center;
-  cursor: default;
-  user-select: none;
-}
-
-.word-cloud .cloud-word:hover{
-  transform: scale(1.08) rotate(0deg);
-  text-decoration: underline;
-}
-
-/* visually-hidden helper */
-.visually-hidden {
-  position: absolute !important;
-  height: 1px; width: 1px;
-  overflow: hidden;
-  clip: rect(1px,1px,1px,1px);
-  white-space: nowrap;
-  border: 0; padding: 0; margin: -1px;
 }
 
 /* Hunger in North Texas Section */
@@ -455,13 +382,6 @@ hr{border:none;border-top:1px solid var(--border);margin:24px 0}
   background: white;
 }
 
-.rsvp-label {
-  font-size: 12px;
-  font-weight: 600;
-  margin: 4px 0 0 0;
-  color: var(--muted);
-}
-
 .rsvp-email-link {
   margin-top: 8px;
   font-size: 12px;
@@ -487,10 +407,6 @@ hr{border:none;border-top:1px solid var(--border);margin:24px 0}
     align-self: center;
   }
   
-  .hunger-in-texas h3 {
-    font-size: 32px;
-  }
-  
   .hunger-in-texas .event-card {
     padding: 16px;
   }
@@ -501,8 +417,6 @@ hr{border:none;border-top:1px solid var(--border);margin:24px 0}
 }
 
 @media (max-width: 640px){
-  .hero h1{font-size:32px}
-  
   .thought-content {
     padding: 20px;
   }

@@ -55,7 +55,5 @@
     // GitHub Copilot
     "github.copilot.enable": {
         "*": false
-    },
-    "chat.defaultProvider": "chatgpt",
-    "openai.apiKey": "your-api-key-here"
+    }
 }
