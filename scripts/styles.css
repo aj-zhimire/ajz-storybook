@@ -54,11 +54,7 @@ a:hover{color:var(--accent)}
   margin-bottom: 12px;
 }
 
-/* Use site-footer to match partials/footer.html */
 .site-footer{border-top:1px solid var(--border);padding:24px 0;color:var(--muted);font-size:14px}
-figure{margin:0}
-figcaption{color:var(--muted);font-size:12px;margin-top:6px}
-hr{border:none;border-top:1px solid var(--border);margin:24px 0}
 
 /* Thought of the Day */
 .thought-of-day {
@@ -386,13 +382,6 @@ hr{border:none;border-top:1px solid var(--border);margin:24px 0}
   background: white;
 }
 
-.rsvp-label {
-  font-size: 12px;
-  font-weight: 600;
-  margin: 4px 0 0 0;
-  color: var(--muted);
-}
-
 .rsvp-email-link {
   margin-top: 8px;
   font-size: 12px;
@@ -418,10 +407,6 @@ hr{border:none;border-top:1px solid var(--border);margin:24px 0}
     align-self: center;
   }
   
-  .hunger-in-texas h3 {
-    font-size: 32px;
-  }
-  
   .hunger-in-texas .event-card {
     padding: 16px;
   }
@@ -432,8 +417,6 @@ hr{border:none;border-top:1px solid var(--border);margin:24px 0}
 }
 
 @media (max-width: 640px){
-  .hero h1{font-size:32px}
-  
   .thought-content {
     padding: 20px;
   }
