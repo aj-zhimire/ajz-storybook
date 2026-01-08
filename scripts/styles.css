@@ -34,19 +34,8 @@ a:hover{color:var(--accent)}
   justify-content: space-between;
   height: 70px;
 }
-.nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
-.brand{display:flex;gap:12px;align-items:center}
+
 .logo{width:40px;height:40px;border-radius:999px;background:var(--accent);opacity:.9}
-.logo a {
-  font-weight: 800;
-  font-size: 20px;
-  letter-spacing: 0.2px;
-  color: var(--text);
-  text-decoration: none;
-}
-.logo a:hover {
-  color: var(--accent);
-}
 .title{font-weight:800;font-size:20px;letter-spacing:.2px}
 .tagline{color:var(--muted);font-size:14px;margin-top:-6px}
 .menu{display:flex;gap:16px;align-items:center}
@@ -67,7 +56,9 @@ a:hover{color:var(--accent)}
   display: block;
   margin-bottom: 12px;
 }
-.footer{border-top:1px solid var(--border);padding:24px 0;color:var(--muted);font-size:14px}
+
+/* Use site-footer to match partials/footer.html */
+.site-footer{border-top:1px solid var(--border);padding:24px 0;color:var(--muted);font-size:14px}
 figure{margin:0}
 figcaption{color:var(--muted);font-size:12px;margin-top:6px}
 hr{border:none;border-top:1px solid var(--border);margin:24px 0}

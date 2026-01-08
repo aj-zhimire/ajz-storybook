@@ -7,7 +7,6 @@ async function loadIncludes() {
   // Keep looping until no more includes are found
   while (hasIncludes) {
     const includes = document.querySelectorAll('[data-include]');
-    console.log('🔍 Found includes:', includes.length, Array.from(includes).map(el => el.getAttribute('data-include')));
     
     if (includes.length === 0) {
       hasIncludes = false;
@@ -23,7 +22,6 @@ async function loadIncludes() {
         const res = await fetch(url);
         if (!res.ok) throw new Error(`Failed to fetch ${url}: ${res.status}`);
         const text = await res.text();
-        console.log('✅ Loaded:', url, 'length:', text.length);
         el.outerHTML = text;
       } catch (err) {
         console.error('❌ Include error:', url, err);
@@ -34,17 +32,12 @@ async function loadIncludes() {
     // Small delay to let DOM settle
     await new Promise(resolve => setTimeout(resolve, 10));
   }
-  
-  console.log('✅ All includes loaded');
 }
 
 // Single initialization after includes are loaded
 document.addEventListener('DOMContentLoaded', async () => {
-  console.log('🚀 DOM loaded, starting includes...');
   await loadIncludes();
-  console.log('🎉 Includes complete, initializing...');
 
   const yearEl = document.querySelector('[data-year]');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
-}
-);
+});
