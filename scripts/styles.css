@@ -41,9 +41,6 @@ a:hover{color:var(--accent)}
 .menu{display:flex;gap:16px;align-items:center}
 .menu a{font-size:14px;color:var(--muted)}
 .menu a.active{color:var(--text);font-weight:600}
-.hero{padding:36px 0 8px 0}
-.hero h1{font-size:40px;margin:0;font-weight:700;letter-spacing:0.2px;line-height:1.1}
-.hero p{margin:8px 0 0 0;color:var(--muted)}
 .card{background:var(--card);padding:20px;border:1px solid var(--border);border-radius:14px;transition:transform .08s ease}
 .card:hover{transform:translateY(-2px)}
 .card h2{margin:8px 0 6px 0;font-size:22px;font-weight:700;letter-spacing:0.2px;line-height:1.15}

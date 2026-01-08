@@ -13,23 +13,20 @@ A minimalist, Ghost‑inspired static site. Drop in your own photos and words.
 ## Structure
 ```
 /
-├── index.html        # home with cards
+├── index.html              # home with cards
 ├── pages/about.html        # about page
-├── archive.html      # simple archive list
-├── post.html         # sample post template
-├── scripts/styles.css        # theme
-├── scripts/script.js         # tiny JS (year stamp)
-└── assets/
-    ├── placeholder.jpg
-    └── avatar-placeholder.svg
+├── pages/hunger-in-texas.html  # event page
+├── scripts/styles.css      # theme
+├── scripts/script.js       # partial loader & year stamp
+├── partials/               # reusable header/footer
+└── assets/                 # images
 ```
 
 ## Customize
-- Change the brand text in the header of each page.
+- Change the brand text in the header partial.
 - Colors live at the top of `scripts/styles.css` in `:root`.
-- Add more posts by duplicating `post.html` and linking from the home or archive.
-- For an email sign‑up, link the **Subscribe** nav item to your tool (Mailchimp, Ghost, ConvertKit, Formspree).
+- Add more pages by creating new HTML files in `pages/`.
 
 ## Notes
 - This is intentionally lightweight (no build step).
-- If you prefer React/Next.js routing or a markdown blog, I can generate that version too.
+- Uses a simple partial loading system for reusable components.
