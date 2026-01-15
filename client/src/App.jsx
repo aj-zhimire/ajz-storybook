@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import About from './pages/About';
 import Home from './pages/Home';
 import HungerInTexas from './pages/HungerInTexas';
+import HamroFoolbari from './pages/HamroFoolbari';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<Home />} /> {/* Use Home here */}
           <Route path="/about" element={<About />} />
           <Route path="/hunger-in-texas" element={<HungerInTexas />} />
+          <Route path="/hamro-foolbari" element={<HamroFoolbari />} />
         </Routes>
       </main>
       <Footer />

@@ -1,0 +1,45 @@
+.hamro-foolbari {
+  margin: 20px 0 32px 0;
+}
+
+.hamro-foolbari .subtitle {
+  margin-top: 6px;
+}
+
+.hamro-foolbari .card h2 {
+  margin-top: 0;
+}
+
+.hamro-hero {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  display: block;
+  margin: 12px 0 16px 0;
+}
+
+.hamro-foolbari .card {
+  margin-bottom: 18px;
+}
+
+.hamro-foolbari .note {
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+.hamro-foolbari .contact-button {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.hamro-foolbari .contact-button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
