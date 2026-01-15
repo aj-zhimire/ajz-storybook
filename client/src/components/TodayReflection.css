@@ -1,0 +1,8 @@
+.wide-sunset {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 12px;
+  margin-top: 8px;
+  object-fit: cover;
+  display: block;
+}

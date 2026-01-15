@@ -1,0 +1,70 @@
+.grid {
+  margin: 20px 0 32px 0;
+}
+
+.section-label {
+  display: block;
+  font-size: 1.1rem;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+.section-meta {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.meta {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+.badge {
+  background: var(--accent);
+  color: #fff;
+  border-radius: 6px;
+  padding: 2px 8px;
+  font-size: 0.85em;
+  margin-left: 6px;
+}
+
+.learning-resources {
+  margin-top: 18px;
+}
+
+.resource-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.resource-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px dashed var(--accent);
+  transition: color 0.2s;
+}
+
+.resource-link:hover {
+  color: var(--text);
+  border-bottom: 1px solid var(--accent);
+}
+
+.fun-facts {
+  background: #f5f5f5;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-top: 10px;
+}
+
+.fun-facts h4 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  color: var(--accent);
+}
