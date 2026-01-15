@@ -35,6 +35,12 @@ a:hover{color:var(--accent)}
   height: 70px;
 }
 
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
 .logo{width:40px;height:40px;border-radius:999px;background:var(--accent);opacity:.9}
 .title{font-weight:800;font-size:20px;letter-spacing:.2px}
 .tagline{color:var(--muted);font-size:14px;margin-top:-6px}

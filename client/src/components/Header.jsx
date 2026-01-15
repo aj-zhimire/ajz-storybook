@@ -1,6 +1,4 @@
 import { Link, useLocation } from 'react-router-dom';
-import './Header.css';
-
 function Header() {
   const location = useLocation();
   return (
