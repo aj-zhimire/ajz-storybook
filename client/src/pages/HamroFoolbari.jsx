@@ -1,4 +1,5 @@
 import './HamroFoolbari.css';
+import { CONTACT_EMAILS, CONTACT_MAILTO } from '../constants/contact';
 
 function HamroFoolbari() {
   return (
@@ -65,8 +66,8 @@ function HamroFoolbari() {
       <section className="card">
         <h2>Contact</h2>
         <p>Questions or volunteering?</p>
-        <a className="contact-button" href="mailto:EducationIsOurRight@ajayzhimire.app">
-          Email: EducationIsOurRight@ajayzhimire.app
+        <a className="contact-button" href={CONTACT_MAILTO.hamroFoolbari}>
+          Email: {CONTACT_EMAILS.hamroFoolbari}
         </a>
       </section>
     </section>

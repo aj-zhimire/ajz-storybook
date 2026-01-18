@@ -1,4 +1,5 @@
 import './HungerInTexas.css';
+import { CONTACT_MAILTO } from '../constants/contact';
 
 function HungerInTexas() {
   return (
@@ -33,7 +34,7 @@ function HungerInTexas() {
                   />
                 </div>
                 <p className="rsvp-email-link">
-                  <a href="mailto:UniqueTMFrisco@gmail.com,contact@ajayzhimire.app?subject=RSVP%20-%20Hunger%20in%20North%20Texas%20Event">
+                  <a href={CONTACT_MAILTO.hungerRsvp}>
                     📧 Email RSVP
                   </a>
                 </p>

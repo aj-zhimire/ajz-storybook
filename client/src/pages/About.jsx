@@ -1,3 +1,5 @@
+import { CONTACT_EMAILS, CONTACT_MAILTO } from '../constants/contact';
+
 function About() {
   return (
     <section className="about-page">
@@ -19,7 +21,8 @@ function About() {
           I hope to see you around!
         </p>
         <p style={{ marginTop: 30 }}>
-          <strong>stay in touch:</strong> <a href="mailto:ajay@ajayzhimire.app">ajay@ajayzhimire.app</a>
+          <strong>stay in touch:</strong>{" "}
+          <a href={CONTACT_MAILTO.main}>{CONTACT_EMAILS.main}</a>
         </p>
         <div style={{ textAlign: "center", marginTop: 40 }}>
           <img
