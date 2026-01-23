@@ -1,6 +1,6 @@
 const CONTACT_EMAILS = {
-  main: 'ajay@ajayzhimire.app',
-  hamroFoolbari: 'EducationIsOurRight@ajayzhimire.app',
+  main: ['ajay@ajayzhimire.app'],
+  hamroFoolbari: 'ajay@ajayzhimire.app',
   hungerRsvp: ['UniqueTMFrisco@gmail.com', 'ajay@ajayzhimire.app'],
 };
 

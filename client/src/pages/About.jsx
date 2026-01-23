@@ -22,7 +22,11 @@ function About() {
         </p>
         <p style={{ marginTop: 30 }}>
           <strong>stay in touch:</strong>{" "}
-          <a href={CONTACT_MAILTO.main}>{CONTACT_EMAILS.main}</a>
+          <a href={CONTACT_MAILTO.main}>
+            {Array.isArray(CONTACT_EMAILS.main)
+              ? CONTACT_EMAILS.main.join(', ')
+              : CONTACT_EMAILS.main}
+          </a>
         </p>
         <div style={{ textAlign: "center", marginTop: 40 }}>
           <img
