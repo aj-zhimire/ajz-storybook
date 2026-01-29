@@ -1,6 +1,9 @@
+import { useState } from 'react';
 import './YoungScientists.css';
 
 function YoungScientists() {
+  const [expanded, setExpanded] = useState(false);
+
   return (
     <section className="grid">
       <article className="card">
@@ -12,9 +15,37 @@ function YoungScientists() {
           Why can't we hear what dogs hear? Explore the amazing world of sound waves, frequency, and how different
           animals experience sound! Perfect for curious middle schoolers.
         </p>
-
         <div className="learning-resources">
-          <div className="resource-links">
+          <div className="fun-facts">
+            <h4>Quick Facts:</h4>
+            <ul>
+              <li><strong>Dogs hear:</strong> 67Hz to 45,000Hz</li>
+              <li><strong>Humans hear:</strong> 20Hz to 20,000Hz</li>
+              {expanded && (
+                <>
+                  <li><strong>Elephants hear:</strong> Really low sounds we can't!</li>
+                  <li><strong>Sound travels:</strong> about 343 meters per second</li>
+                </>
+              )}
+            </ul>
+          </div>
+        </div>
+
+        <div className="card-meta">
+          <small>
+            <button
+              type="button"
+              className="card-meta-link"
+              aria-expanded={expanded}
+              onClick={() => setExpanded((prev) => !prev)}
+            >
+              {expanded ? 'Read Less' : 'Read More'}
+            </button>
+          </small>
+        </div>
+
+        <div className="card-meta card-meta-links">
+          <small>
             <a
               href="https://www.youtube.com/watch?v=TsQL-sXZOLc"
               target="_blank"
@@ -23,6 +54,7 @@ function YoungScientists() {
             >
               How Sound Works (3 min)
             </a>
+            •{' '}
             <a
               href="https://www.youtube.com/watch?v=_2By2ane2I4"
               target="_blank"
@@ -31,6 +63,7 @@ function YoungScientists() {
             >
               Animal Hearing vs Human Hearing
             </a>
+            •{' '}
             <a
               href="https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=600"
               target="_blank"
@@ -39,17 +72,7 @@ function YoungScientists() {
             >
               Frequency Chart
             </a>
-          </div>
-
-          <div className="fun-facts">
-            <h4>Quick Facts:</h4>
-            <ul>
-              <li><strong>Dogs hear:</strong> 67Hz to 45,000Hz</li>
-              <li><strong>Humans hear:</strong> 20Hz to 20,000Hz</li>
-              <li><strong>Elephants hear:</strong> Really low sounds we can't!</li>
-              <li><strong>Sound travels:</strong> about 343 meters per second</li>
-            </ul>
-          </div>
+          </small>
         </div>
       </article>
     </section>

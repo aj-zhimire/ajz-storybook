@@ -6,8 +6,6 @@ import About from './pages/About';
 import Home from './pages/Home';
 import HungerInTexas from './pages/HungerInTexas';
 import HamroFoolbari from './pages/HamroFoolbari';
-
-
 function App() {
   return (
     <BrowserRouter>

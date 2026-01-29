@@ -1,0 +1,151 @@
+/* Meta/info text style */
+
+.meta {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+.badge {
+  background: var(--accent);
+  color: #fff;
+  border-radius: 6px;
+  padding: 2px 8px;
+  font-size: 0.85em;
+  margin-left: 6px;
+}
+
+
+/* Card base */
+.card-section {
+  margin: 20px 0 32px 0;
+  padding: 0;
+}
+
+.card-content {
+  background: linear-gradient(135deg, var(--card) 0%, var(--bg) 100%);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px;
+  position: relative;
+  transition: transform .08s ease;
+}
+
+.card-content:hover {
+  transform: translateY(-2px);
+}
+
+.card-content blockquote {
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 400;
+  margin: 0 0 12px 0;
+  line-height: 1.5;
+}
+
+.card-content h2 {
+  margin: 8px 0 6px 0;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  line-height: 1.15;
+}
+
+.card-meta {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+.card-meta small {
+  font-size: 12px;
+}
+
+.card-meta-link {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.card-meta-link:hover {
+  text-decoration: underline;
+}
+
+.learning-resources {
+  margin-top: 18px;
+}
+
+.resource-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.resource-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px dashed var(--accent);
+  transition: color 0.2s;
+}
+
+.resource-link:hover {
+  color: var(--text);
+  border-bottom: 1px solid var(--accent);
+}
+
+.card-meta-links .resource-link {
+  border-bottom: none;
+  font-weight: 500;
+}
+
+.card-meta-links .resource-link:hover {
+  text-decoration: underline;
+  border-bottom: none;
+}
+
+.fun-facts {
+  background: #f5f5f5;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-top: 10px;
+}
+
+.fun-facts h4 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  color: var(--accent);
+}
+
+.card-expand {
+  margin-top: 12px;
+}
+
+.card-expand ul {
+  list-style: disc;
+  margin: 12px 0 0 1.25rem;
+  padding: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.45;
+  color: var(--text);
+}
+
+.card-expand ul li {
+  margin: 0 0 8px 0;
+}
+
+.card-expand ul a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.card-expand ul a:hover {
+  text-decoration: underline;
+}
