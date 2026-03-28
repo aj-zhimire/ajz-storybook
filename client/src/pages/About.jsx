@@ -1,4 +1,4 @@
-import { CONTACT_EMAILS, CONTACT_MAILTO } from '../constants/contact';
+import { CONTACT_EMAILS, CONTACT_MAILTO } from "../constants/contact";
 
 function About() {
   return (
@@ -6,25 +6,28 @@ function About() {
       <h1>About Me</h1>
       <section className="card about-card">
         <p>
-          I began my PhD as a hobby. It soon grew into a passion for knowledge and self-learning. For me, learning is a way to keep pace with social and technological change while exploring what it means to be human.
+          I began my PhD in Finance as a hobby. It soon grew into a passion for
+          knowledge and self-learning. It has helped me understand the power of
+          experiments to uncover economical chanllenges, the catalysts behind it
+          and solutions.
+        </p>
+
+        <p>
+          I work as a data architect professionally and research the
+          intersection of technology, investments and asset pricing. My first
+          research is to aid with policy proposals on Investements as it relates
+          to underserved and marginalized community.
         </p>
         <p>
-          I'm fascinated by the human mind, its choices, behaviors, short term and long term memory storage.
+          I will share essays, blogs discussion threads and reflections drawn
+          from both lived and learned experiences.
         </p>
-        <p>
-          I work as a data architect professionally and research the intersection of technology and human behavior. My first research is asset-pricing and behavioral finance, rational vs irrational decision making.
-        </p>
-        <p>
-          I will share essays, blogs discussion threads and reflections drawn from both lived and learned experiences.
-        </p>
-        <p>
-          I hope to see you around!
-        </p>
+        <p>I hope to see you around!</p>
         <p style={{ marginTop: 30 }}>
           <strong>stay in touch:</strong>{" "}
           <a href={CONTACT_MAILTO.main}>
             {Array.isArray(CONTACT_EMAILS.main)
-              ? CONTACT_EMAILS.main.join(', ')
+              ? CONTACT_EMAILS.main.join(", ")
               : CONTACT_EMAILS.main}
           </a>
         </p>
@@ -37,7 +40,7 @@ function About() {
               height: 200,
               borderRadius: "50%",
               border: "3px solid var(--border)",
-              objectFit: "cover"
+              objectFit: "cover",
             }}
           />
         </div>
