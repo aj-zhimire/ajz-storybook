@@ -4,6 +4,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AJZ Storybook</title>
+    <script>
+      (function () {
+        const redirect = window.location.search.match(/[?&]p=([^&]+)/);
+
+        if (!redirect) {
+          return;
+        }
+
+        const path = decodeURIComponent(redirect[1]).replace(/~and~/g, '&');
+        const target = path + window.location.hash;
+
+        window.history.replaceState(null, '', target);
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
