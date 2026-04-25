@@ -13,6 +13,7 @@ function Header() {
         </div>
         <nav className="menu">
           <Link to="/" className={location.pathname === '/' ? 'active' : ''}>Home</Link>
+          <Link to="/intuit-tutor" className={location.pathname === '/intuit-tutor' ? 'active' : ''}>Intuit Tutor</Link>
           <Link to="/hunger-in-texas" className={location.pathname === '/hunger-in-texas' ? 'active' : ''}>Hunger in Texas</Link>
           <Link to="/hamro-foolbari" className={location.pathname === '/hamro-foolbari' ? 'active' : ''}>Hamro Foolbari Academy</Link>
           <Link to="/about" className={location.pathname === '/about' ? 'active' : ''}>About</Link>
