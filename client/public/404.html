@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>AJZ Storybook</title>
+    <script>
+      (function () {
+        var location = window.location;
+        var redirect =
+          location.protocol +
+          '//' +
+          location.hostname +
+          (location.port ? ':' + location.port : '') +
+          '/?p=' +
+          encodeURIComponent(location.pathname.slice(1) + location.search.replace(/&/g, '~and~')) +
+          location.hash;
+
+        location.replace(redirect);
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
