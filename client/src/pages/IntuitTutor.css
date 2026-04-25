@@ -1,0 +1,138 @@
+.tutor-page {
+  padding: 48px 0 64px;
+}
+
+.tutor-hero {
+  display: grid;
+  grid-template-columns: minmax(180px, 240px) 1fr;
+  gap: 28px;
+  align-items: center;
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background:
+    radial-gradient(circle at top left, rgba(15, 118, 110, 0.12), transparent 36%),
+    linear-gradient(135deg, var(--card) 0%, var(--bg) 100%);
+  margin: 24px 0 28px;
+}
+
+.tutor-logo {
+  width: 100%;
+  max-width: 220px;
+  justify-self: center;
+  display: block;
+}
+
+.tutor-kicker {
+  margin: 0 0 8px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.tutor-hero h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  line-height: 1.05;
+}
+
+.tutor-subtitle {
+  margin: 10px 0 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.tutor-intro {
+  margin: 14px 0 20px;
+  font-size: 1.1rem;
+  color: var(--muted);
+  max-width: 42rem;
+}
+
+.tutor-cta {
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.tutor-cta:hover {
+  color: #ffffff;
+  opacity: 0.9;
+}
+
+.tutor-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.tutor-card {
+  padding: 22px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--card);
+}
+
+.tutor-contact-card {
+  grid-column: 1 / -1;
+}
+
+.tutor-card h2 {
+  margin: 0 0 10px;
+  font-size: 1.25rem;
+}
+
+.tutor-card p {
+  margin: 0;
+}
+
+.tutor-card a {
+  color: var(--accent);
+}
+
+.tutor-contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 140px;
+  gap: 20px;
+  align-items: center;
+}
+
+.tutor-contact-note {
+  margin-top: 14px;
+  color: var(--muted);
+}
+
+.tutor-qr {
+  width: 140px;
+  height: 140px;
+  justify-self: end;
+  border-radius: 12px;
+  background: #ffffff;
+  padding: 10px;
+  border: 1px solid var(--border);
+}
+
+@media (max-width: 700px) {
+  .tutor-hero,
+  .tutor-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tutor-hero {
+    padding: 22px;
+  }
+
+  .tutor-contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .tutor-qr {
+    justify-self: start;
+  }
+}
