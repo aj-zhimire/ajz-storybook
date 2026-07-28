@@ -1,8 +1,11 @@
 import './IntuitTutor.css';
+import ArchivedBanner from '../components/ArchivedBanner';
 
 function IntuitTutor() {
   return (
-    <section className="tutor-page">
+    <>
+      <ArchivedBanner date="January 2026" />
+      <section className="tutor-page">
       <div className="tutor-hero">
         <img
           className="tutor-logo"
@@ -102,6 +105,7 @@ function IntuitTutor() {
         </article>
       </div>
     </section>
+    </>
   );
 }
 

@@ -1,9 +1,12 @@
 import './HamroFoolbari.css';
 import { CONTACT_EMAILS, CONTACT_MAILTO } from '../constants/contact';
+import ArchivedBanner from '../components/ArchivedBanner';
 
 function HamroFoolbari() {
   return (
-    <section className="hamro-foolbari">
+    <>
+      <ArchivedBanner date="Archived" />
+      <section className="hamro-foolbari">
       <h1>Hamro Foolbari Academy</h1>
       <p className="subtitle">Education is a right! • Ramechhap, Nepal</p>
 
@@ -71,6 +74,7 @@ function HamroFoolbari() {
         </a>
       </section>
     </section>
+    </>
   );
 }
 

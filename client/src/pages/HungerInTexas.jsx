@@ -1,9 +1,12 @@
 import './HungerInTexas.css';
 import { CONTACT_MAILTO } from '../constants/contact';
+import ArchivedBanner from '../components/ArchivedBanner';
 
 function HungerInTexas() {
   return (
-    <section className="hunger-in-texas">
+    <>
+      <ArchivedBanner date="January 30, 2026" />
+      <section className="hunger-in-texas">
       <h2>Hunger in North Texas</h2>
       <div className="event-card">
         <div className="event-details">
@@ -75,6 +78,7 @@ function HungerInTexas() {
         </div>
       </div>
     </section>
+    </>
   );
 }
 

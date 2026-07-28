@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import HungerInTexas from './pages/HungerInTexas';
 import HamroFoolbari from './pages/HamroFoolbari';
 import IntuitTutor from './pages/IntuitTutor';
+import Archive from './pages/Archive';
 function App() {
   return (
     <BrowserRouter>
@@ -18,6 +19,7 @@ function App() {
           <Route path="/hunger-in-texas" element={<HungerInTexas />} />
           <Route path="/hamro-foolbari" element={<HamroFoolbari />} />
           <Route path="/intuit-tutor" element={<IntuitTutor />} />
+          <Route path="/archive" element={<Archive />} />
         </Routes>
       </main>
       <Footer />
