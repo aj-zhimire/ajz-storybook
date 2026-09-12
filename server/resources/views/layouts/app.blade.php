@@ -33,16 +33,17 @@
     </style>
 </head>
 <body>
+    @php($basePath = rtrim(request()->getBasePath(), '/'))
     <header class="header">
         <div class="header-container">
-            <a class="brand" href="{{ route('home', absolute: false) }}">
+            <a class="brand" href="{{ $basePath ?: '/' }}">
                 <span class="logo" aria-hidden="true"></span>
                 <span><span class="title">AJZ Storybook</span><br><span class="tagline">essays, science experiments, notes, music</span></span>
             </a>
             <nav class="menu" aria-label="Primary navigation">
-                <a class="{{ request()->routeIs('home') ? 'active' : '' }}" href="{{ route('home', absolute: false) }}">Home</a>
-                <a class="{{ request()->routeIs('about') ? 'active' : '' }}" href="{{ route('about', absolute: false) }}">About</a>
-                <a class="{{ request()->routeIs('archive') ? 'active' : '' }}" href="{{ route('archive', absolute: false) }}">Archive</a>
+                <a class="{{ request()->routeIs('home') ? 'active' : '' }}" href="{{ $basePath ?: '/' }}">Home</a>
+                <a class="{{ request()->routeIs('about') ? 'active' : '' }}" href="{{ $basePath }}/about">About</a>
+                <a class="{{ request()->routeIs('archive') ? 'active' : '' }}" href="{{ $basePath }}/archive">Archive</a>
             </nav>
         </div>
     </header>

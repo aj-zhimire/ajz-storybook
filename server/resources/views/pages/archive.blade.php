@@ -8,7 +8,7 @@
             <article class="archive-item">
                 <h2>{{ $item->title }}</h2>
                 <p>{{ $item->excerpt }}</p>
-                <p><a class="button" href="{{ route($item->route_name, absolute: false) }}">View page</a></p>
+                <p><a class="button" href="{{ rtrim(request()->getBasePath(), '/') }}/{{ $item->route_name }}">View page</a></p>
             </article>
         @endforeach
     </div>
