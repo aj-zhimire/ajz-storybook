@@ -1,0 +1,11 @@
+---
+deployment:
+  tasks:
+    - export APPPATH=/home/pxs1575/repositories/ajayzhimire/server
+    - export DEPLOYPATH=/home/pxs1575/public_html/ajayzhimire
+    - cd $APPPATH && composer install --no-dev --optimize-autoloader
+    - mkdir -p $DEPLOYPATH
+    - /bin/cp -R $APPPATH/public/. $DEPLOYPATH/
+    - /usr/bin/sed -i "s#__DIR__.'/../storage/framework/maintenance.php'#'$APPPATH/storage/framework/maintenance.php'#" $DEPLOYPATH/index.php
+    - /usr/bin/sed -i "s#__DIR__.'/../vendor/autoload.php#'$APPPATH/vendor/autoload.php#" $DEPLOYPATH/index.php
+    - /usr/bin/sed -i "s#__DIR__.'/../bootstrap/app.php#'$APPPATH/bootstrap/app.php#" $DEPLOYPATH/index.php
