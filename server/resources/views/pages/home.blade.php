@@ -14,7 +14,7 @@
                 </small>
             </div>
         </div>
-        <img class="wide-sunset" src="/assets/sunset.jpg" alt="Beautiful sunset landscape">
+        <img class="wide-sunset" src="{{ rtrim(request()->getBasePath(), '/') }}/assets/sunset.jpg" alt="Beautiful sunset landscape">
     </section>
 
     <section class="card home-card">

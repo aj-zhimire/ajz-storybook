@@ -9,7 +9,7 @@
         <p>I hope to see you around!</p>
         <p class="about-contact"><strong>Stay in touch:</strong> <a class="button" href="mailto:ajay@ajayzhimire.app">ajay@ajayzhimire.app</a></p>
         <div class="profile-image-wrap">
-            <img class="profile-image" src="/assets/profile.jpeg" alt="Ajay Zhimire">
+            <img class="profile-image" src="{{ rtrim(request()->getBasePath(), '/') }}/assets/profile.jpeg" alt="Ajay Zhimire">
         </div>
     </section>
 @endsection
