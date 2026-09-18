@@ -8,7 +8,7 @@ function About() {
         <p>
           I began my PhD in Finance as a hobby. It soon grew into a passion for
           knowledge and self-learning. It has helped me understand the power of
-          experiments to uncover economical chanllenges, the catalysts behind it
+          experiments to uncover economical challenges, the catalysts behind it
           and solutions.
         </p>
 
