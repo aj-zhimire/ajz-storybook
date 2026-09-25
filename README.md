@@ -39,3 +39,5 @@ The local default uses SQLite for quick setup. For a LAMP deployment, set `DB_CO
 - Public images and static files live in `server/public/assets/`.
 
 Production should serve `server/public` through Apache or another PHP-capable web server. GitHub Pages cannot run Laravel/PHP, so the old static Pages workflow was removed.
+
+The public domain is hosted separately at `uta.cloud`. Configure DNS for `ajayzhimire.app` with an apex `A` record pointing to `104.248.69.80`, and configure `www` as a `CNAME` to `uta.cloud`. Remove the old GitHub Pages records (`185.199.108.153` through `185.199.111.153`) before verifying HTTPS and the canonical redirect.
