@@ -4,17 +4,51 @@
     <div class="archived-banner"><p>Archived event: January 30, 2026</p></div>
     <section class="card">
         <h1>Hunger in North Texas</h1>
-        <p class="subtitle">Facts, policy, and community action</p>
-        <p>A public panel discussion on food insecurity hosted by Ajay Ghimire and Unique Toastmasters Club in Frisco, Texas.</p>
-        <h2>Panel Topics</h2>
-        <ul>
-            <li>Hunger in Texas statistics and impact</li>
-            <li>North Texas Food Bank mission and community impact</li>
-            <li>SNAP changes and policy updates</li>
-            <li>Community action opportunities</li>
-        </ul>
-        <p><strong>Date:</strong> Friday, January 30, 2026<br><strong>Time:</strong> 7:00 AM - 7:45 AM<br><strong>Location:</strong> Rosa's Café, Frisco, TX</p>
-        <p><a class="button" href="mailto:UniqueTMFrisco@gmail.com,ajay@ajayzhimire.app?subject=RSVP%20-%20Hunger%20in%20North%20Texas%20Event">Email RSVP</a></p>
-        <p><a href="https://ntfb.org" target="_blank" rel="noopener noreferrer">North Texas Food Bank</a> · <a href="https://unique.toastmastersclubs.org" target="_blank" rel="noopener noreferrer">Unique Toastmasters Club</a></p>
+        <h2>Facts • Policy • Community Action</h2>
+        <p class="subtitle">A Public Panel Discussion on Food Insecurity</p>
+
+        <p><strong>Hosted by:</strong> Ajay Ghimire, Unique Toastmasters Club, Frisco TX</p>
+        <p><strong>Featuring:</strong> <a href="https://ntfb.org" target="_blank" rel="noopener noreferrer">North Texas Food Bank</a></p>
+
+        <h3>Panel Topics</h3>
+        <div class="topics-rsvp-row">
+            <ul>
+                <li>Hunger in Texas statistics and impact</li>
+                <li>NTFB mission &amp; community impact</li>
+                <li>SNAP Changes and policy updates</li>
+                <li>Community action opportunities</li>
+            </ul>
+            <div class="rsvp-inline">
+                <div class="qr-container">
+                    <img src="{{ rtrim(request()->getBasePath(), '/') }}/assets/rsvp-qr-code.png" alt="RSVP QR Code" class="qr-code-small">
+                </div>
+                <p class="rsvp-email-link">
+                    <a href="mailto:UniqueTMFrisco@gmail.com,ajayzhimire@yahoo.com?subject=RSVP%20-%20Hunger%20in%20North%20Texas%20Event">📧 Email RSVP</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="event-datetime">
+            <p><strong>📅 Date:</strong> Friday, January 30, 2026</p>
+            <p><strong>🕐 Time:</strong> 7:00 AM - 7:45 AM</p>
+            <p><strong>📍 Location:</strong> Rosa's Café, 12275 Custer Rd, Frisco, TX</p>
+        </div>
+
+        <p class="event-note">Live Audience Q&amp;A • Live Streaming Available</p>
+
+        <div class="partners">
+            <p><em>In partnership with Toastmasters International and North Texas Food Bank</em></p>
+            <p class="tagline">Awareness leads to action. Action leads to impact.</p>
+        </div>
+
+        <div class="officials-invited">
+            <h3>Officials Invited</h3>
+            <p>Invitations have been extended to federal, state, and City of Frisco officials. Attendance is voluntary, and confirmations are pending.</p>
+        </div>
+
+        <p>
+            <a href="https://unique.toastmastersclubs.org" target="_blank" rel="noopener noreferrer">unique.toastmastersclubs.org</a> |
+            <a href="https://ntfb.org" target="_blank" rel="noopener noreferrer">ntfb.org</a>
+        </p>
     </section>
 @endsection
