@@ -1,7 +1,6 @@
 # AJZ Storybook
 
-A minimalist, Ghost-inspired site built with React + Vite.  
-Live at: [ajayzhimire.app](https://ajayzhimire.app)
+A minimalist, Ghost-inspired site built with Laravel and Blade.
 
 ---
 
@@ -9,37 +8,34 @@ Live at: [ajayzhimire.app](https://ajayzhimire.app)
 
 ```
 /
-├── client/                    # React + Vite app
-│   ├── index.html
-│   ├── vite.config.js
-│   ├── package.json
-│   └── src/
-│       ├── main.jsx
-│       ├── App.jsx
-│       ├── App.css            # global theme + layout
-│       ├── components/
-│       ├── pages/
-│       └── assets/
+├── server/                    # Laravel application
+│   ├── app/
+│   ├── database/
+│   ├── resources/views/       # Blade pages and shared layout
+│   └── routes/web.php
 │
-├── .github/workflows/pages.yml
 ├── CNAME
 └── README.md
 ```
+
+## Laravel Quick Start
+
+```bash
+cd server
+cp .env.example .env
+php artisan key:generate
+php artisan migrate --seed
+php artisan serve
+```
+
+The local default uses SQLite for quick setup. For a LAMP deployment, set `DB_CONNECTION=mysql` and the MySQL connection values in `server/.env`, then run `php artisan migrate --seed`. Configure Apache's document root to `server/public` and enable `mod_rewrite`.
 
 ---
 
 ## Styling Approach
 
-- Global theme and shared layout live in `client/src/App.css`.
-- Component/page-specific styles live alongside their JSX files.
-- Keep shared styles global and avoid duplicate class definitions in component CSS.
+- Shared theme and layout styles live in `server/resources/views/layouts/app.blade.php`.
+- Page-specific markup lives in `server/resources/views/pages/`.
+- Public images and static files live in `server/public/assets/`.
 
----
-
-## Quick Start
-
-```bash
-cd client
-npm install
-npm run dev
-```
+Production should serve `server/public` through Apache or another PHP-capable web server. GitHub Pages cannot run Laravel/PHP, so the old static Pages workflow was removed.
